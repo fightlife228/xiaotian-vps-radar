@@ -413,6 +413,68 @@
       ]
     }
   ],
+  "freebies": [
+    {
+      "id": "nodaroo-free",
+      "provider": "Nodaroo",
+      "name": "免费容器计划（社区热传）",
+      "form": "容器面板（Holactyl · 非独立 KVM）",
+      "stability": "实验级 · 随时可能改规则或满员",
+      "tier_level": "experimental",
+      "spec": "200% CPU · 6GB RAM · 50GB NVMe",
+      "auth_req": "Discord 登录 · 免绑卡",
+      "renewal_rule": "基于积分与活跃机制；无商业 SLA，随时可能清退、限额或节点满员。",
+      "caveats": "非独立 root KVM：无完整内核权限（不可自启内核 BBR，Docker-in-Docker 受限），无独立 IPv4（共享 IP + 分配端口）；面板虽列中国/德国节点但免费池常满员，严禁存放数据库或生产业务。",
+      "use_case": "仅限临时测试脚本、轻量 TG/Discord Bot、MC/应用练手。",
+      "url": "https://free.nodaroo.com/",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "altare-free",
+      "provider": "Altare",
+      "name": "Always Free 免费团队池",
+      "form": "容器面板（非独立 KVM）",
+      "stability": "实验级 · 积分制保活",
+      "tier_level": "experimental",
+      "spec": "150% CPU · 6GB RAM · 10GB 磁盘（最多拆 4 台）",
+      "auth_req": "免绑卡 · 支持 SSH 与常见运行时",
+      "renewal_rule": "需遵守平台积分/活跃保活规则；免费资源池存在排队、降配或回收风险。",
+      "caveats": "磁盘仅 10GB 且同样属于共享容器环境而非独立 KVM，不适合重 IO 数据库或长期稳定建站；仅建议作轻量 Bot 与临时环境。",
+      "use_case": "Node / Python / Go 轻量 Bot、多实例沙盒实验。",
+      "url": "https://altr.cc/",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "oracle-always-free",
+      "provider": "Oracle Cloud",
+      "name": "Always Free（ARM 4C24G / AMD 微型机）",
+      "form": "完整独立虚拟机（KVM / ARM VM）",
+      "stability": "大厂真永久免费 · 风控极严",
+      "tier_level": "caution",
+      "spec": "最高 4 核 ARM + 24GB RAM + 200GB 存储",
+      "auth_req": "必须绑定真实信用卡预授权验证",
+      "renewal_rule": "官方 Always Free 长期免费，但长期低负载闲置实例会被自动回收；存在无预警封号风控。",
+      "caveats": "拥有真独立 IP 与完整 root 权限，但国内信用卡注册极难通过，ARM 免费配额长期缺货，且免费号随时有风控删号风险，务必异地定时备份。",
+      "use_case": "抢到且稳住后可跑容器与轻量项目（必须做好自动备份）。",
+      "url": "https://www.oracle.com/cloud/free/",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "cloudflare-free",
+      "provider": "Cloudflare",
+      "name": "Workers + Pages 免费边缘栈",
+      "form": "Serverless 边缘函数 + 静态托管",
+      "stability": "生产级稳定 · 零运维不删机",
+      "tier_level": "stable",
+      "spec": "每日 10 万次请求 + 无限静态带宽 + KV/AI 免费额",
+      "auth_req": "邮箱注册即可（免绑卡）",
+      "renewal_rule": "Cloudflare 官方 Free Tier 长期可用，无积分保活、无闲置删机。",
+      "caveats": "不是 Linux SSH 主机，无法运行传统常驻后台或完整 Docker；但做个人主页、文档站、展示页与定时轻量 API（例如本站本身）比任何白嫖容器站都稳得多。",
+      "use_case": "个人主页、静态博客、定时 RSS/AI 聚合 API。",
+      "url": "https://workers.cloudflare.com/",
+      "checked": "2026-11-23"
+    }
+  ],
   "archived": [
     {
       "id": "cc-prebf-1g",

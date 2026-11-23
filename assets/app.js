@@ -7,6 +7,7 @@ const market = d => d.market || (d.currency === 'CNY' ? 'china' : 'overseas');
 const safe = s => String(s ?? '').replace(/[&<>"']/g, x => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
 
 let current = [];
+let freebies = [];
 let archived = [];
 let watch = [];
 let payments = [];
@@ -260,6 +261,36 @@ function applyPreset(preset) {
   renderDeals();
 }
 
+function renderFreebies() {
+  const grid = $('freebieGrid');
+  if (!grid) return;
+  grid.innerHTML = freebies.map(f => {
+    const level = f.tier_level || 'experimental';
+    return `<article class="freebie-card tier-${safe(level)}">
+      <div class="fb-top">
+        <span class="watch-provider">${safe(f.provider)} · <span class="mono" style="font-weight:600;color:var(--muted)">${safe(f.form)}</span></span>
+        <span class="fb-badge ${safe(level)}">${safe(f.stability)}</span>
+      </div>
+      <h3>${safe(f.name)}</h3>
+      <div class="fb-spec-bar">
+        <span class="meta-pill mono">${safe(f.spec)}</span>
+        <span class="meta-pill">${safe(f.auth_req)}</span>
+      </div>
+      <div class="fb-kv">
+        <div><strong>时效 / 保活：</strong>${safe(f.renewal_rule)}</div>
+        <div><strong>适用边界：</strong>${safe(f.use_case)}</div>
+      </div>
+      <div class="fb-warn ${level === 'stable' ? 'is-safe' : ''}">
+        <strong>${level === 'stable' ? '能力边界：' : '硬伤与风险红线：'}</strong>${safe(f.caveats)}
+      </div>
+      <div class="fb-foot">
+        <span class="mono" style="color:var(--muted);font-size:11px">核验 ${safe(f.checked)} · 纯官方无推广</span>
+        <a href="${safe(f.url)}" target="_blank" rel="noopener noreferrer nofollow">直达官方入口 ↗</a>
+      </div>
+    </article>`;
+  }).join('');
+}
+
 function renderArchive() {
   const grid = $('archiveGrid');
   if (!grid) return;
@@ -495,6 +526,7 @@ async function main() {
     const data = await res.json();
     snapshotDate = data.snapshot || snapshotDate;
     current = data.offers || [];
+    freebies = data.freebies || [];
     archived = data.archived || [];
     watch = data.watch || [];
     payments = data.payment_providers || [];
@@ -511,6 +543,7 @@ async function main() {
     }
 
     renderDeals();
+    renderFreebies();
     renderArchive();
     renderWatch();
     renderPayments();
