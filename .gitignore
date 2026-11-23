@@ -1,0 +1,7 @@
+.wrangler/
+wrangler.jsonc
+wrangler.toml
+.dev.vars
+node_modules/
+.DS_Store
+Thumbs.db

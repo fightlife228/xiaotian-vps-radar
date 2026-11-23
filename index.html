@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://vps.xiaotianai.win/" />
+  <meta name="description" content="面向开发者与进阶玩家的 VPS 与国内云情报台：核验 RackNerd、阿里云、腾讯云、华为云等真实年费与循环续费条款，每 4 小时自动聚合 9 源黑五线索与 AI 中文简报，内置 3 年 TCO 计算器、AI 选机 Prompt 与新机一键验机命令。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="小天 VPS 雷达" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="小天 VPS 雷达 · 2026 国内云与海外 VPS 续费核验、4H AI 情报与开发者工具箱" />
+  <meta property="og:description" content="专注真实年费、循环续费口径、支付宝/微信支持与实测排障：每 4 小时自动追踪 9 大 VPS 促销源，开源免费部署。" />
+  <meta property="og:url" content="https://vps.xiaotianai.win/" />
+  <meta property="og:image" content="https://vps.xiaotianai.win/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://vps.xiaotianai.win/assets/og-cover.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="/assets/theme.js?v=20"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"小天 VPS 雷达","url":"https://vps.xiaotianai.win/","inLanguage":"zh-CN","description":"面向开发者与进阶玩家的国内外 VPS / 云服务器优惠核验、续费口径对比、每 4 小时自动 AI 线索与实用工具箱。","publisher":{"@type":"Organization","name":"小天聊AI","url":"https://www.xiaotianai.win/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"2026 VPS 公开核验优惠快照","itemListElement":[{"@type":"ListItem","position":1,"name":"RackNerd 2026 黑五 KVM 4GB ($47.98/年，循环续费)","url":"https://vps.xiaotianai.win/#deals"},{"@type":"ListItem","position":2,"name":"RackNerd 2026 黑五 KVM 6GB ($74.98/年，循环续费)","url":"https://vps.xiaotianai.win/#deals"},{"@type":"ListItem","position":3,"name":"阿里云 ECS 经济型 e 99计划 (¥99/年，锁价至 2029-03)","url":"https://vps.xiaotianai.win/#deals"},{"@type":"ListItem","position":4,"name":"腾讯云 Lighthouse 国内同价续费专区 (¥199/年)","url":"https://vps.xiaotianai.win/#deals"},{"@type":"ListItem","position":5,"name":"华为云 Flexus L 2核2G 新客秒杀 (¥36/年)","url":"https://vps.xiaotianai.win/#deals"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"2026 黑五便宜 VPS 第二年续费还是优惠价吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。循环续费（Recurring）才表示保持服务可按同价续费；国内云通常分限期锁价（如99计划截至2029-03）或仅限同价续费1次；秒杀价多数按原价续费。购买前应以三年总成本核对条款。"}},{"@type":"Question","name":"4GB 内存 VPS 适合跑 AI Agent 和自动化任务吗？","acceptedAnswer":{"@type":"Answer","text":"如果模型推理调用外部 API，4GB 内存搭配 SSD 通常足以运行轻量任务调度器、Bot、n8n、SQLite 和小型网站；但不能在 VPS 本地运行大型语言模型。"}},{"@type":"Question","name":"个人博客应该买 VPS 还是直接用 Cloudflare Pages？","acceptedAnswer":{"@type":"Answer","text":"纯静态博客、文档站和作品集优先用 Cloudflare Pages 免费托管，零运维且免维护 HTTPS；需要常驻后台、Docker 容器、数据库或任务调度时再买独立 VPS。"}}]}</script>
+  <title>小天 VPS 雷达 · 2026 VPS 优惠与续费核验、4H AI 情报雷达与开发者工具箱</title>
+  <link rel="stylesheet" href="/assets/site.css?v=20" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav-inner">
+      <a class="brand" href="/" aria-label="小天 VPS 雷达首页"><span class="brand-mark">✳</span><span>小天 <b>VPS RADAR</b></span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#deals" class="active">精选机型</a>
+        <a href="#leads">全网雷达</a>
+        <a href="/table.html">参数总表</a>
+        <a href="#tools">实战工具</a>
+        <a href="#payment">支付矩阵</a>
+        <a href="#seo-guides">深度指南</a>
+        <a href="/about.html">关于</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="github-btn" href="https://github.com/fightlife228/xiaotian-vps-radar" target="_blank" rel="noopener noreferrer" aria-label="GitHub 开源仓库">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="切换主题">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Compact Engineering Header & Live Telemetry -->
+    <section class="hero-compact">
+      <div class="shell">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow"><span class="live-dot"></span> VPS INTELLIGENCE TERMINAL · BLACK FRIDAY 2026</div>
+            <h1>服务器不买贵，<span class="text-gradient">更不踩续费与线路坑。</span></h1>
+            <p class="hero-sub">面向开发者与进阶玩家的独立 VPS / 国内云核验台：直看 <strong>真实年费、循环续费条款、SSD/HDD、支付宝/微信与实测排障</strong>，每 4 小时自动同步 9 源线索与实时汇率。</p>
+            <div class="hero-meta-bar">
+              <span id="snapLine" class="mono">快照 2026-11-23 · 每 4 小时自动同步</span>
+              <span>·</span>
+              <a href="/table.html">完整参数总表 / 导出 CSV ↗</a>
+              <span>·</span>
+              <a href="/data/offers.json" target="_blank" rel="noopener">offers.json</a>
+              <span>·</span>
+              <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
+            </div>
+          </div>
+          <div class="telemetry-grid" aria-label="站点实时遥测">
+            <div class="kpi-card"><span>在售核验机型</span><strong id="statCount">9 款</strong><small>已隔离过期活动</small></div>
+            <div class="kpi-card"><span>同价续费核实</span><strong id="statRenewal">5 款</strong><small>未知项绝不猜测</small></div>
+            <div class="kpi-card"><span>实时参考汇率</span><strong id="statFx">¥7.20</strong><small id="statFxMeta">1 USD · 每 4h 自动更新</small></div>
+            <div class="kpi-card"><span>追踪厂商总数</span><strong id="statProviders">14 家</strong><small>含观望区与历史档案</small></div>
+          </div>
+        </div>
+
+        <!-- Expiring / Active Window Spotlight Strip -->
+        <div class="spotlight-strip" aria-label="窗口期与状态速览">
+          <a class="spotlight-item" href="#deals">
+            <div class="sp-left"><b>RackNerd 2026 黑五 KVM（1G~8G）</b><small>$15.98~$94.98/年 · 官方声明循环同价</small></div>
+            <span class="sp-badge live">黑五窗口中</span>
+          </a>
+          <a class="spotlight-item" href="#deals">
+            <div class="sp-left"><b>阿里云 ECS 99 计划 · 2C2G 固定 3M</b><small>¥99/年 · 新老同享不限流量</small></div>
+            <span class="sp-badge lock">锁价至 2029-03</span>
+          </a>
+          <a class="spotlight-item" href="#archive">
+            <div class="sp-left"><b>CloudCone PREBF26 等 3 项过期优惠</b><small>已移入下架档案留底比价，不混入在售榜</small></div>
+            <span class="sp-badge ended">已自动隔离</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 / Curated Verified Deals (First-Screen Core) -->
+    <section class="content-section shell" id="deals">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">01 / VERIFIED OFFERS</span>
+          <h2>精选核验机型 <span class="subtle">· 点“详情与日志”查核验记录</span></h2>
+        </div>
+        <p>部分“官网推广直达”含官方联盟参数（已规范标注 sponsored），不增加购机价；所有核验来源均直达官方活动原页。</p>
+      </div>
+
+      <div class="quick-pills" role="group" aria-label="进阶快捷切面">
+        <button type="button" class="quick-pill active" data-preset="all">全部在售</button>
+        <button type="button" class="quick-pill" data-preset="bf-recurring">海外循环同价</button>
+        <button type="button" class="quick-pill" data-preset="under-20">年付 ≤ ¥150</button>
+        <button type="button" class="quick-pill" data-preset="china-budget">国内直连人民币</button>
+        <button type="button" class="quick-pill" data-preset="ai-agent">≥4GB 跑 AI / Docker</button>
+        <button type="button" class="quick-pill" data-preset="alipay">确认支持支付宝</button>
+      </div>
+
+      <div class="filter-panel">
+        <div class="search-group">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="搜索厂商 / 机房 / 4GB / SSD / 支付宝…" aria-label="搜索优惠" />
+        </div>
+        <label>地区
+          <select id="market">
+            <option value="all">国内 + 海外</option>
+            <option value="china">中国内地</option>
+            <option value="overseas">海外节点</option>
+          </select>
+        </label>
+        <label>最低内存
+          <select id="ram">
+            <option value="0">不限</option>
+            <option value="2">2GB+</option>
+            <option value="4">4GB+</option>
+            <option value="8">8GB+</option>
+            <option value="16">16GB+</option>
+          </select>
+        </label>
+        <label>续费口径
+          <select id="renewal">
+            <option value="all">全部</option>
+            <option value="known">已核实同价/锁价</option>
+            <option value="unknown">非同价 / 待核实</option>
+          </select>
+        </label>
+        <label>支付 / 币种
+          <select id="payFilter">
+            <option value="all">不限</option>
+            <option value="yes">确认支付宝</option>
+            <option value="maybe">含待核实支付宝</option>
+            <option value="wechat">确认微信支付</option>
+            <option value="cny">人民币计价</option>
+          </select>
+        </label>
+        <label>排序
+          <select id="sort">
+            <option value="recommended">推荐优先</option>
+            <option value="cny-asc">折合年费 低→高</option>
+            <option value="memory">内存 大→小</option>
+            <option value="three">3 年总成本优先</option>
+            <option value="price">按币种分组</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="result-strip">
+        <span id="resultText" class="mono">读取核验数据中…</span>
+        <span class="legend">
+          <span><i class="legend-green"></i>官网核验</span>
+          <span><i class="legend-gold"></i>社区促销帖</span>
+          <a href="/table.html" style="color:var(--accent-text);font-weight:650">切换完整表格视图 ↗</a>
+        </span>
+      </div>
+
+      <div id="dealGrid" class="deal-grid" aria-live="polite">
+        <noscript>
+          <p>请启用 JavaScript 使用筛选与计算器，或直接访问 <a href="/table.html">完整静态参数总表（无需 JS）</a>。</p>
+        </noscript>
+      </div>
+      <div id="empty" class="empty" hidden>没有符合条件的机型，尝试降低内存门槛或清空搜索词。</div>
+    </section>
+
+    <!-- 02 / 4H Automated 9-Source AI Intelligence Radar -->
+    <section class="content-section shell" id="leads">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">02 / LIVE RADAR · 4H CRON + WORKERS AI</span>
+          <h2>全网 4H 情报雷达 <span class="subtle">· 9 源自动抓取 + AI 中文速读</span></h2>
+        </div>
+        <p>Cloudflare Workers 每 4 小时自动聚合 LET / LEB / LES / 老左 / VPSGO 等 9 大公开源，免费 AI 增量中文化，原始数据直接开放 JSON API。</p>
+      </div>
+
+      <div id="aiBriefBox" class="ai-brief-box"><!--SSR_AI_BRIEF--></div>
+
+      <div class="radar-toolbar">
+        <div class="lead-filters" role="group" aria-label="线索分类筛选" style="margin:0">
+          <button type="button" class="lead-tab active" data-lead-filter="all">全部线索</button>
+          <button type="button" class="lead-tab" data-lead-filter="promo">黑五 / 促销关键词</button>
+          <button type="button" class="lead-tab" data-lead-filter="overseas">海外源 (LET·LEB)</button>
+          <button type="button" class="lead-tab" data-lead-filter="china">中文社区源</button>
+        </div>
+        <div class="radar-search-wrap">
+          <input id="leadSearch" class="lead-search-input" type="search" placeholder="过滤线索关键词（如 NVMe / Tokyo / $15）" aria-label="搜索实时线索" />
+          <div class="api-pills">
+            <a class="api-pill" href="/api/leads" target="_blank" rel="noopener">GET /api/leads</a>
+            <a class="api-pill" href="/api/live-status" target="_blank" rel="noopener">GET /api/live-status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-strip">
+        <span id="leadStatus" class="mono">正在同步最近一轮 4 小时自动线索…</span>
+        <span class="legend">线索未经逐条人工核价，请点击原文核实库存与续费条款</span>
+      </div>
+      <div id="leadGrid" class="watch-grid" aria-live="polite"><!--SSR_LEADS--></div>
+    </section>
+
+    <!-- 03 / Pro Developer Toolbox (3 High-Value Micro-Tools) -->
+    <section class="content-section shell" id="tools">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">03 / PRO TOOLBOX</span>
+          <h2>进阶实战工具箱 <span class="subtle">· 算账、让 AI 选机、新机一键验机</span></h2>
+        </div>
+        <p>全部纯本地零追踪运行，实时接入每 4 小时自动同步的 USD/CNY 参考汇率。</p>
+      </div>
+
+      <div class="tool-tabs" role="tablist" aria-label="实用工具切换">
+        <button type="button" class="tool-tab active" data-tool-tab="advisor">① 3 年 TCO 换机计算器</button>
+        <button type="button" class="tool-tab" data-tool-tab="ai-prompt">② 一键生成 AI 选机 Prompt</button>
+        <button type="button" class="tool-tab" data-tool-tab="bench-kit">③ 新机验机 / 测速 / BBR 命令速查</button>
+      </div>
+
+      <!-- Tool 1: 3-Year TCO & Migration Calculator -->
+      <div class="tool-panel" id="advisor">
+        <div class="compare-grid">
+          <div class="compare-copy">
+            <h3>已有旧 VPS，黑五要不要换机？</h3>
+            <p>输入当前旧机年费与规格，横向对照在售核验机型，直接看首年差价与 3 年总持有成本（TCO）。</p>
+            <div class="compare-fields">
+              <label>旧机年费（USD）<input id="oldPrice" type="number" min="0" step="0.01" value="59.99" /></label>
+              <label>实时汇率（1 USD ≈ CNY）<input id="fxRate" type="number" min="0.1" max="100" step="0.01" value="7.20" /></label>
+              <label>旧机内存（GB）<input id="oldRam" type="number" min="0" step="0.5" value="4" /></label>
+              <label>旧机 vCPU（核）<input id="oldCpu" type="number" min="0" step="1" value="3" /></label>
+            </div>
+            <p class="calc-notes">说明：默认自动填入最近同步汇率并允许手动修改；未计入旧机剩余残值、机房线路差异与迁移工时。</p>
+          </div>
+          <div class="compare-output">
+            <div class="tiny-label">选择对比目标机型</div>
+            <select id="compareSelect" aria-label="选择对比套餐"></select>
+            <div id="compareResult" class="compare-result"></div>
+            <div class="subtle-link"><a href="/guides/ai-agent-vps.html#move">查看零停机安全迁移检查清单 ↗</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 2: Structured AI Selection Prompt Generator -->
+      <div class="tool-panel" id="ai-prompt" hidden>
+        <div class="prompt-grid">
+          <div class="prompt-copy">
+            <h3>懒得自己逐项对比？一键打包发给 AI 拍板</h3>
+            <p>自动附带本站当前已核验机型快照与实时汇率，防止大模型胡编过期黑五价或漏算续费坑。</p>
+            <div class="prompt-fields">
+              <label>年预算上限
+                <select id="pBudget">
+                  <option value="¥100~200 / 年（极省入门）">¥100~200 / 年（极省入门）</option>
+                  <option value="¥300~500 / 年（高性价比主力）" selected>¥300~500 / 年（高性价比主力）</option>
+                  <option value="¥500~1000 / 年（多容器/中大型）">¥500~1000 / 年（多容器/中大型）</option>
+                </select>
+              </label>
+              <label>核心部署场景
+                <select id="pScene">
+                  <option value="跑 AI Agent / OpenClaw / n8n 自动化（调外部模型 API）" selected>AI Agent / OpenClaw / n8n</option>
+                  <option value="个人博客 / 文档站 / 多 Docker 容器自托管">博客 / 多 Docker 自托管</option>
+                  <option value="国内用户直接访问的 Web / 小程序后端（低延迟）">国内直连 Web / 小程序后端</option>
+                  <option value="轻量监控探针 / Webhook / 学习 Linux">监控探针 / Webhook / 练手</option>
+                </select>
+              </label>
+              <label>机房 / 备案偏好
+                <select id="pRegion">
+                  <option value="优先海外免备案（美西/亚太均可）" selected>优先海外免备案</option>
+                  <option value="必须中国内地直连（接受 ICP 备案）">中国内地直连（接受备案）</option>
+                  <option value="不限地域，只看 3 年总性价比">不限地域，只看 3 年性价比</option>
+                </select>
+              </label>
+              <label>支付方式要求
+                <select id="pPay">
+                  <option value="必须支持支付宝或微信支付" selected>必须支持支付宝 / 微信</option>
+                  <option value="有 PayPal / 外币信用卡，不限">有 PayPal / 国际卡，不限</option>
+                </select>
+              </label>
+              <label class="full">补充技术约束（可选）
+                <input id="pExtra" type="text" placeholder="例：必须 SSD 不要 HDD；需要 4GB 以上内存；最好能循环同价续费" />
+              </label>
+            </div>
+          </div>
+          <div class="prompt-output-box">
+            <div class="tiny-label">已生成的结构化选机 PROMPT（可编辑）</div>
+            <textarea id="promptPreview" class="prompt-preview" aria-label="AI 选机 Prompt 预览"></textarea>
+            <div class="prompt-actions">
+              <span id="promptCopyStatus" class="copy-status"></span>
+              <button type="button" id="copyPromptBtn" class="btn btn-primary">一键复制 Prompt</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 3: New VPS Bench / Route / BBR / Docker Command Kit -->
+      <div class="tool-panel" id="bench-kit" hidden>
+        <div class="bench-head">
+          <h3>新机到手必跑 · 5 条开源标准验机与优化命令</h3>
+          <p>覆盖硬件/IO 核验、三网回程路由检测、内核 BBR 拥塞控制与 Docker 部署。全部来自开源社区常用项目，执行前建议按习惯快速审阅脚本源。</p>
+        </div>
+        <div id="benchGrid" class="bench-grid"></div>
+      </div>
+    </section>
+
+    <!-- 04 / 12-Provider Payment Matrix -->
+    <section class="content-section shell" id="payment">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">04 / PAYMENT MATRIX</span>
+          <h2>12 家厂商支付与币种核验表</h2>
+        </div>
+        <p>能扫支付宝 ≠ 人民币定价；海外商家通常按 USD/EUR 账单按实时汇率折算扣款。</p>
+      </div>
+      <div class="payment-notice"><strong>核验提醒：</strong>下单前请确认结算页实际可选通道、是否支持余额预充（如 CloudCone Cloud Credits）以及次年续费是否需要手动扫码支付。</div>
+      <div class="payment-table-wrap">
+        <table class="payment-table">
+          <thead><tr><th>服务商</th><th>支付宝</th><th>微信支付</th><th>银联</th><th>公开账单币种与说明</th><th>官方依据</th></tr></thead>
+          <tbody id="paymentRows"></tbody>
+        </table>
+      </div>
+      <p class="payment-footnote">“官网未列出”仅表示查核时的公开文档未列示，具体以账号结算页为准。</p>
+    </section>
+
+    <!-- 05 / Three-State Lifecycle: Watchlist + Archived/Expired -->
+    <section class="content-section shell" id="watch">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">05 / WATCHLIST</span>
+          <h2>观望区 <span class="subtle">· 未出实价绝不编造黑五价</span></h2>
+        </div>
+        <p>高口碑厂商若尚未公布 2026 明确黑五套餐，先放观望区持续跟踪并标注复核日期。</p>
+      </div>
+      <div id="watchGrid" class="watch-grid"></div>
+    </section>
+
+    <section class="content-section shell" id="archive">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">06 / EXPIRED &amp; DELISTED ARCHIVE</span>
+          <h2>已过期 / 下架档案 <span class="subtle">· 过期即隔离，留档供比价</span></h2>
+        </div>
+        <p>结束的优惠码与历史活动不混在在售榜误导点击，保留历史参考价方便横向判断是否值得等。</p>
+      </div>
+      <div id="archiveGrid" class="archive-grid"></div>
+    </section>
+
+    <!-- 07 / Mainland Cloud Essentials -->
+    <section class="content-section shell" id="domestic">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">07 / MAINLAND CLOUD NOTES</span>
+          <h2>买国内公有云前必核 3 条硬规则</h2>
+        </div>
+        <p>针对阿里云、腾讯云、华为云长期使用最容易踩坑的续费、带宽与备案边界。</p>
+      </div>
+      <div class="domestic-info-grid">
+        <article class="watch-card"><div class="watch-provider">01 / 首年价 ≠ 长期价</div><h3>查清“同价续费几次”与锁价截止日</h3><p>阿里云 99 计划写明截至 2029-03-31；腾讯云同价专区明确限 1 次；新客秒杀基本按原价续费。</p><a href="https://www.aliyun.com/activity/ecs/99program" target="_blank" rel="noopener noreferrer">阿里云官方规则 ↗</a></article>
+        <article class="watch-card"><div class="watch-provider">02 / 固定带宽 vs 峰值流量包</div><h3>3M 固定不限流 ≠ 6M 限 600GB/月</h3><p>轻量服务器多配月流量包，跑镜像拉取、图床或定时备份前需核实超额计费口径。</p><a href="https://cloud.tencent.com/act/pro/double11-xfzq" target="_blank" rel="noopener noreferrer">腾讯云活动规则 ↗</a></article>
+        <article class="watch-card"><div class="watch-provider">03 / 主体实名与 ICP 备案</div><h3>内地节点对外建站必须完成备案</h3><p>仅做内网反代、定时脚本或客户端 API 调用相对简单；绑定域名公开提供 Web 服务须提前规划备案周期。</p><a href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/getting-started/quick-start-for-icp-filing-for-personal-websites" target="_blank" rel="noopener noreferrer">官方备案说明 ↗</a></article>
+      </div>
+    </section>
+
+    <!-- 08 / Original Deep-Dive Guides -->
+    <section class="seo-section shell" id="seo-guides">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">08 / FIELD GUIDES</span>
+          <h2>深度原创指南与真实排障复盘</h2>
+        </div>
+        <p>写给真实上线折腾的人：含 147 次超时日志排障复盘、CF Pages vs VPS 架构对比与 3 年账单拆解。</p>
+      </div>
+      <div class="seo-card-grid">
+        <a class="seo-card" href="/guides/vps-network-troubleshooting.html"><h3>海外 VPS 连不上怎么排障？3 天真实复盘</h3><p>SSH 时通时断、服务端活着却满屏 timeout：147 次超时日志对账与 Cloudflare Tunnel 破局实录。</p><small>真实实战复盘 · 2026-11-22</small></a>
+        <a class="seo-card" href="/guides/cloudflare-pages-vs-vps.html"><h3>Cloudflare Pages 和 VPS 建站怎么选？</h3><p>$0 静态托管 vs 付费服务器场景边界，以及个人开发者最稳的“静态站 + 轻后端”混合架构。</p><small>架构选型指南 · 2026-11-22</small></a>
+        <a class="seo-card" href="/guides/ai-agent-vps.html"><h3>AI Agent / OpenClaw VPS 要买多少内存？</h3><p>4GB 与 8GB 的真实资源占用、SSD IO 影响，以及换机迁移避免重复派单的检查清单。</p><small>部署决策指南 · 2026-11-20</small></a>
+        <a class="seo-card" href="/guides/vps-renewal-cost.html"><h3>VPS 续费价与 3 年总成本（TCO）怎么算？</h3><p>循环同价、限期锁价、限续 1 次与首年秒杀的账单差异与避坑公式。</p><small>成本核算指南 · 2026-11-20</small></a>
+        <a class="seo-card" href="/guides/vps-alipay-rmb.html"><h3>支持支付宝和人民币的 VPS 怎么选？</h3><p>支付宝通道与人民币计价的区别、外币折算成本与次年手动续费提醒。</p><small>支付核验指南 · 2026-11-20</small></a>
+        <a class="seo-card" href="/guides/china-cloud-vs-overseas.html"><h3>国内御三家与海外 VPS 怎么选？</h3><p>围绕备案、国内直连延迟、海外 API 访问、活动资格与长期成本做决策。</p><small>架构对比指南 · 2026-11-20</small></a>
+        <a class="seo-card" href="/guides/vps-common-questions.html"><h3>买 VPS 前最常问的 10 个实战问题</h3><p>从 HDD vs SSD、vCPU 超售、线路实测到安全迁移的直白回答。</p><small>原创 FAQ · 2026-11-20</small></a>
+        <a class="seo-card" href="/about.html"><h3>核验原则、推广披露与 GitHub 纠错</h3><p>数据如何核验、sponsored 链接如何标注，以及如何通过 GitHub Issue 提交新优惠或报失效。</p><small>编辑政策 · 2026-11-23</small></a>
+      </div>
+    </section>
+
+    <!-- 09 / Third-party Info Sites & Methodology -->
+    <section class="content-section shell" id="sources">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">09 / COMMUNITY SOURCES</span>
+          <h2>国内 VPS 资讯与比价参考站</h2>
+        </div>
+        <p>用于横向交叉发现线索；正式报价与续费一律回到云厂商官方条款页复核。</p>
+      </div>
+      <div id="sourceGrid" class="watch-grid"></div>
+    </section>
+
+    <section class="knowledge shell" id="method">
+      <div>
+        <span class="section-kicker">10 / VERIFICATION SPEC</span>
+        <h2>每一条参数，都可追溯、可纠错。</h2>
+        <p>本站点完全开源（MIT），运行在 Cloudflare Workers + KV + Workers AI 免费额度上。如果你发现某条优惠已涨价、无货或有更优循环同价方案，欢迎直接提 Issue / PR。</p>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-outline" href="https://github.com/fightlife228/xiaotian-vps-radar/issues/new" target="_blank" rel="noopener noreferrer">提交优惠 / 报失效 ↗</a>
+          <a class="btn btn-outline" href="/table.html">查看完整参数总表 ↗</a>
+        </div>
+      </div>
+      <div class="knowledge-points">
+        <article><span>01</span><h3>先核官页，再上架</h3><p>优先云厂商官方活动页与帮助文档；社区原始帖单独标示，绝不把转载标题冒充官方承诺。</p></article>
+        <article><span>02</span><h3>续费与过期绝不藏</h3><p>严格区分循环同价、限期锁价、限续 1 次与未知续费；过期优惠立刻移入下架档案。</p></article>
+        <article><span>03</span><h3>不虚构测速与线路</h3><p>1Gbps 端口不等于国内直连速度；未实测线路绝不标“三网优化”，并提供开源验机命令自测。</p></article>
+      </div>
+    </section>
+
+    <footer class="footer shell">
+      <div>
+        <a class="brand" href="/"><span class="brand-mark">✳</span><span>小天 <b>VPS RADAR</b></span></a>
+        <p>面向开发者与进阶玩家的独立 VPS 优惠核验与 4H 自动情报台。</p>
+      </div>
+      <div class="foot-right">
+        <span>独立信息整理项目，非商家代理、不代收款项。部分“官网推广直达”含联盟参数（已规范标注 sponsored），不增加购机费用。</span>
+        <span>
+          <a href="https://github.com/fightlife228/xiaotian-vps-radar" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a> ·
+          <a href="/table.html">完整对比表</a> ·
+          <a href="/data/offers.json" target="_blank" rel="noopener">offers.json</a> ·
+          <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> ·
+          <a href="/sitemap.xml">Sitemap</a> ·
+          <a href="/about.html">关于与披露</a> ·
+          <a href="https://www.xiaotianai.win/" target="_blank" rel="noopener">小天聊AI 主站 ↗</a>
+        </span>
+        <span class="mono">© 2026 小天 VPS 雷达 · V2.0 Engineering Edition · Cloudflare Workers + KV + AI</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Slide-Over Offer Detail & Audit Changelog Drawer -->
+  <div id="offerDrawer" class="drawer-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <span id="drawerProvider" class="section-kicker">PROVIDER</span>
+          <h3 id="drawerTitle">套餐详情与核验日志</h3>
+        </div>
+        <button type="button" id="drawerCloseBtn" class="drawer-close" aria-label="关闭详情">✕</button>
+      </div>
+      <div id="drawerBody" class="drawer-body"></div>
+      <div class="drawer-foot">
+        <a id="drawerSourceLink" class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">原始核验来源 ↗</a>
+        <a id="drawerBuyLink" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">直达官方活动页 ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/app.js?v=20" defer></script>
+</body>
+</html>

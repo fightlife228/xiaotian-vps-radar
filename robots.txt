@@ -1,0 +1,5 @@
+# Public search and user-directed retrieval allowed. No crawling guarantee.
+User-agent: *
+Allow: /
+
+Sitemap: https://vps.xiaotianai.win/sitemap.xml

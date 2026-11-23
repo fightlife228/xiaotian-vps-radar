@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://vps.xiaotianai.win/table.html" />
+  <meta name="description" content="2026 国内云与海外 VPS 完整参数与续费总表：同屏对比 CPU、内存、SSD/HDD、首年价、实时汇率折合人民币、循环续费口径与官方来源，支持一键导出 CSV 与 JSON。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="小天 VPS 雷达" />
+  <meta property="og:title" content="完整 VPS 参数与续费对比总表（支持导出 CSV / JSON）｜小天 VPS 雷达" />
+  <meta property="og:description" content="零营销话术、全参数横评总表：覆盖 RackNerd、阿里云、腾讯云、华为云、DediRock 在售机型及已过期下架档案。" />
+  <meta property="og:url" content="https://vps.xiaotianai.win/table.html" />
+  <meta property="og:image" content="https://vps.xiaotianai.win/assets/og-cover.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="/assets/theme.js?v=20"></script>
+  <title>完整 VPS 参数与续费总表（支持导出 CSV / JSON）｜小天 VPS 雷达</title>
+  <link rel="stylesheet" href="/assets/site.css?v=20" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav-inner">
+      <a class="brand" href="/"><span class="brand-mark">✳</span><span>小天 <b>VPS RADAR</b></span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="/#deals">精选机型</a>
+        <a href="/#leads">全网雷达</a>
+        <a href="/table.html" class="active">参数总表</a>
+        <a href="/#tools">实战工具</a>
+        <a href="/#seo-guides">深度指南</a>
+        <a href="/about.html">关于</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="github-btn" href="https://github.com/fightlife228/xiaotian-vps-radar" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="切换主题">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-compact">
+      <div class="shell">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow"><span class="live-dot"></span> FULL SPECIFICATION MATRIX</div>
+            <h1>完整 VPS 参数与续费总表</h1>
+            <p class="hero-sub">同屏横向比对全部在售核验机型与已过期档案，支持按折合年费/内存排序，并一键导出 <strong>CSV</strong> 或直接读取 <strong>offers.json</strong>。</p>
+            <div class="hero-meta-bar">
+              <a href="/">← 返回卡片工作台</a>
+              <span>·</span>
+              <span id="tblMeta" class="mono">快照 2026-11-23 · 零 JS 爬虫可直接读取静态表</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+            <button type="button" id="exportCsvBtn" class="btn btn-primary">导出 CSV 表格</button>
+            <a class="btn btn-outline" href="/data/offers.json" download="xiaotian-vps-offers.json">下载 offers.json</a>
+            <a class="btn btn-outline" href="/api/leads" target="_blank" rel="noopener">查看 /api/leads ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section shell">
+      <div class="radar-toolbar">
+        <div class="quick-pills" style="margin:0">
+          <button type="button" class="quick-pill active" data-tf="all">全部在售</button>
+          <button type="button" class="quick-pill" data-tf="overseas">海外 VPS</button>
+          <button type="button" class="quick-pill" data-tf="china">国内公有云</button>
+          <button type="button" class="quick-pill" data-tf="recurring">仅看循环/锁价续费</button>
+        </div>
+        <div class="radar-search-wrap">
+          <select id="tblSort" class="lead-search-input" style="width:185px" aria-label="排序方式">
+            <option value="cny-asc">折合年费 低→高</option>
+            <option value="ram-desc">内存 大→小</option>
+            <option value="provider">按服务商分组</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="payment-table-wrap">
+        <table class="data-table" id="fullSpecTable">
+          <thead>
+            <tr>
+              <th>服务商 / 机型</th>
+              <th>规格 (CPU / RAM / 盘)</th>
+              <th>机房 / 带宽</th>
+              <th>首期年价</th>
+              <th>折合人民币/年</th>
+              <th>续费口径</th>
+              <th>支付宝</th>
+              <th>核验日期</th>
+              <th>官方入口</th>
+            </tr>
+          </thead>
+          <tbody id="tblBody">
+            <!-- Static SEO Fallback Rows (hydrated dynamically with live FX rate when JS runs) -->
+            <tr><td><strong>RackNerd</strong> · 2026 黑五 KVM 4GB</td><td class="mono">4C / 4GB / 60GB SSD</td><td>美国多机房</td><td class="mono"><strong>$47.98</strong></td><td class="mono">按实时汇率</td><td>循环同价 ($47.98)</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://www.racknerd.com/BlackFriday/?category=vps" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>RackNerd</strong> · 2026 黑五 KVM 6GB</td><td class="mono">6C / 6GB / 85GB SSD</td><td>美国多机房</td><td class="mono"><strong>$74.98</strong></td><td class="mono">按实时汇率</td><td>循环同价 ($74.98)</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://www.racknerd.com/BlackFriday/?category=vps" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>RackNerd</strong> · 2026 黑五 KVM 8GB</td><td class="mono">6C / 8GB / 140GB SSD</td><td>美国多机房</td><td class="mono"><strong>$94.98</strong></td><td class="mono">按实时汇率</td><td>循环同价 ($94.98)</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://www.racknerd.com/BlackFriday/?category=vps" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>RackNerd</strong> · 2026 黑五 KVM 1GB</td><td class="mono">1C / 1GB / 20GB SSD</td><td>美国多机房</td><td class="mono"><strong>$15.98</strong></td><td class="mono">按实时汇率</td><td>循环同价 ($15.98)</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://www.racknerd.com/BlackFriday/?category=vps" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>阿里云</strong> · ECS 经济型 e 99计划</td><td class="mono">2C / 2GB / 40GB ESSD</td><td>中国内地 · 3M 固定</td><td class="mono"><strong>¥99</strong></td><td class="mono">¥99</td><td>锁价至 2029-03-31</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://www.aliyun.com/activity/ecs/99program" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>腾讯云</strong> · Lighthouse 同价专区</td><td class="mono">2C / 4GB / 70GB SSD</td><td>中国内地 · 6M/600G</td><td class="mono"><strong>¥199</strong></td><td class="mono">¥199</td><td>限同价续费 1 次</td><td>微信为主</td><td class="mono">2026-11-23</td><td><a href="https://cloud.tencent.com/act/pro/double11-xfzq" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>华为云</strong> · Flexus L 11.11 秒杀</td><td class="mono">2C / 2GB / 40GB 云盘</td><td>华北-北京四 · 2M/100G</td><td class="mono"><strong>¥36</strong></td><td class="mono">¥36</td><td>仅首年秒杀</td><td>已确认</td><td class="mono">2026-11-23</td><td><a href="https://activity.huaweicloud.com/" target="_blank" rel="noopener noreferrer">官网核验 ↗</a></td></tr>
+            <tr><td><strong>DediRock</strong> · High-RAM Core 8GB</td><td class="mono">1C / 8GB / 20GB HDD</td><td>美国纽约布法罗</td><td class="mono"><strong>$24.99</strong></td><td class="mono">按实时汇率</td><td>待核实</td><td>待核实</td><td class="mono">2026-11-20</td><td><a href="https://billing.dedirock.com/" target="_blank" rel="noopener noreferrer">商家官网 ↗</a></td></tr>
+            <tr><td><strong>DediRock</strong> · High-RAM Plus 16GB</td><td class="mono">1C / 16GB / 30GB HDD</td><td>美国纽约布法罗</td><td class="mono"><strong>$59.99</strong></td><td class="mono">按实时汇率</td><td>待核实</td><td>待核实</td><td class="mono">2026-11-20</td><td><a href="https://billing.dedirock.com/" target="_blank" rel="noopener noreferrer">商家官网 ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="payment-footnote">说明：表内价格均为核验日公开快照，折合人民币按每 4 小时自动同步的 USD/CNY 参考汇率计算；最终金额、库存与续费条款请以云厂商结算页为准。</p>
+    </section>
+
+    <section class="content-section shell">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">EXPIRED / ARCHIVED</span>
+          <h2>已过期 / 下架历史档案</h2>
+        </div>
+        <p>已截止优惠不混入在售对比，保留历史参考价防止踩过期货。</p>
+      </div>
+      <div class="payment-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>厂商</th><th>活动名称</th><th>规格与历史参考价</th><th>截止时间</th><th>下架原因</th><th>核验链接</th></tr></thead>
+          <tbody id="tblArchiveBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer shell">
+      <div>
+        <a class="brand" href="/"><span class="brand-mark">✳</span><span>小天 <b>VPS RADAR</b></span></a>
+        <p>先核清 3 年账单与续费条款，再决定下单。</p>
+      </div>
+      <div class="foot-right">
+        <span><a href="/">返回首页</a> · <a href="https://github.com/fightlife228/xiaotian-vps-radar" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a> · <a href="/about.html">核验原则与披露</a></span>
+        <span class="mono">© 2026 小天 VPS 雷达</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+  (async function () {
+    const safe = s => String(s ?? '').replace(/[&<>"']/g, x => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
+    const money = (n, c) => (c === 'CNY' ? '¥' : '$') + Number(n).toFixed(c === 'CNY' ? 0 : 2);
+    const payLabel = x => x === 'yes' ? '已确认' : x === 'verify' ? '待核实' : x === 'unlisted' ? '未列出' : '未知';
+    let fx = 7.20;
+    let offers = [];
+    let archived = [];
+    let payments = [];
+    let activeFilter = 'all';
+
+    try {
+      const [offRes, liveRes] = await Promise.all([
+        fetch('/data/offers.json', { cache: 'no-store' }),
+        fetch('/api/live-status', { cache: 'no-store' }).catch(() => null)
+      ]);
+      const data = await offRes.json();
+      offers = data.offers || [];
+      archived = data.archived || [];
+      payments = data.payment_providers || [];
+      if (liveRes && liveRes.ok) {
+        const st = await liveRes.json();
+        if (st?.fx?.usd_cny) fx = Number(st.fx.usd_cny);
+      }
+      document.getElementById('tblMeta').textContent = `快照 ${data.snapshot || '2026-11-23'} · 实时参考汇率 1 USD ≈ ¥${fx.toFixed(2)} · 共 ${offers.length} 款在售 + ${archived.length} 条归档`;
+    } catch { return; }
+
+    const isRec = d => typeof d.renewal === 'number' && (d.renewal_type === 'recurring' || d.renewal_type === 'until-date');
+    const cnyVal = d => d.currency === 'CNY' ? d.price : d.price * fx;
+    const payOf = p => payments.find(x => x.provider === p);
+
+    function filteredOffers() {
+      let list = offers.slice();
+      if (activeFilter === 'overseas') list = list.filter(d => (d.market || 'overseas') === 'overseas');
+      else if (activeFilter === 'china') list = list.filter(d => d.market === 'china');
+      else if (activeFilter === 'recurring') list = list.filter(isRec);
+      const sort = document.getElementById('tblSort').value;
+      if (sort === 'ram-desc') list.sort((a, b) => b.ram - a.ram || cnyVal(a) - cnyVal(b));
+      else if (sort === 'provider') list.sort((a, b) => a.provider.localeCompare(b.provider) || cnyVal(a) - cnyVal(b));
+      else list.sort((a, b) => cnyVal(a) - cnyVal(b));
+      return list;
+    }
+
+    function render() {
+      const list = filteredOffers();
+      document.getElementById('tblBody').innerHTML = list.map(d => {
+        const pay = payOf(d.provider);
+        const ren = isRec(d)
+          ? `<span class="payment-status pay-yes">${money(d.renewal, d.currency)}/年${d.renewal_type === 'until-date' ? '·锁价' : '·循环'}</span>`
+          : `<span class="payment-status pay-verify">${d.renewal_type === 'once' ? '限同价1次' : '待核实'}</span>`;
+        return `<tr>
+          <td><strong>${safe(d.provider)}</strong> · ${safe(d.name)}${d.recommended ? ' <span class="rec-badge">★推荐</span>' : ''}</td>
+          <td class="mono">${safe(d.cpu)}C / ${safe(d.ram)}GB / ${safe(d.disk)}G ${safe(d.disk_type)}</td>
+          <td>${safe(d.region)}<div class="payment-detail">${safe(d.bandwidth || '')}${d.monthly_traffic_gb ? ' · ' + safe(d.monthly_traffic_gb) : ''}</div></td>
+          <td class="mono"><strong>${money(d.price, d.currency)}</strong></td>
+          <td class="mono">¥${cnyVal(d).toFixed(0)}/年</td>
+          <td>${ren}</td>
+          <td><span class="payment-status pay-${safe(pay?.alipay || 'unknown')}">${payLabel(pay?.alipay)}</span></td>
+          <td class="mono">${safe(d.checked)}</td>
+          <td><a href="${safe(d.buy)}" target="_blank" rel="${d.sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer nofollow'}">${d.sponsored ? '推广直达 ↗' : '官网 ↗'}</a></td>
+        </tr>`;
+      }).join('');
+
+      document.getElementById('tblArchiveBody').innerHTML = archived.map(a => `<tr>
+        <td><strong>${safe(a.provider)}</strong></td>
+        <td>${safe(a.name)}</td>
+        <td class="mono">${safe(a.spec)} · ${safe(a.historical_price)}</td>
+        <td class="mono"><span class="sp-badge ended">${safe(a.ended_at)}</span></td>
+        <td>${safe(a.reason)}</td>
+        <td><a href="${safe(a.portal)}" target="_blank" rel="${a.sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer nofollow'}">查看当前页 ↗</a></td>
+      </tr>`).join('');
+    }
+
+    document.querySelectorAll('[data-tf]').forEach(btn => btn.addEventListener('click', () => {
+      activeFilter = btn.dataset.tf;
+      document.querySelectorAll('[data-tf]').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    }));
+    document.getElementById('tblSort').addEventListener('change', render);
+    document.getElementById('exportCsvBtn').addEventListener('click', () => {
+      const rows = [['服务商', '套餐名', 'vCPU', '内存GB', '硬盘GB', '硬盘类型', '机房', '首期年价', '币种', '折合CNY', '续费口径', '核验日期', '官方核验链接']];
+      filteredOffers().forEach(d => {
+        rows.push([d.provider, d.name, d.cpu, d.ram, d.disk, d.disk_type, d.region, d.price, d.currency, cnyVal(d).toFixed(2), d.renewal_note, d.checked, d.source]);
+      });
+      const csv = '\uFEFF' + rows.map(r => r.map(v => '"' + String(v ?? '').replace(/"/g, '""') + '"').join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'xiaotian-vps-radar-offers.csv';
+      a.click();
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+{
+  "updated_at": "2026-11-21T20:07:13+00:00",
+  "interval_hours": 4,
+  "engine": "cloudflare-workers-cron-4h",
+  "sources": [
+    "LowEndBox",
+    "LEB Black Friday",
+    "LowEndTalk Offers",
+    "LowEndSpirit Offers",
+    "RackNerd Blog",
+    "老左笔记",
+    "VPSGO",
+    "VPS小学生",
+    "VPS侦探"
+  ],
+  "successful_sources": [
+    "LowEndBox",
+    "LEB Black Friday",
+    "LowEndTalk Offers",
+    "LowEndSpirit Offers",
+    "RackNerd Blog",
+    "老左笔记",
+    "VPSGO",
+    "VPS小学生",
+    "VPS侦探"
+  ],
+  "failed_sources": [],
+  "notice": "仅为公开来源标题线索，未经优惠价格、库存、续费或支付宝支付方式核验。",
+  "items": [
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "Infrawire – Netherlands now available | Introducing VPC | NVMe VPS, High Performance, from $9.55/mo",
+      "url": "https://lowendtalk.com/discussion/223658/infrawire-netherlands-now-available-introducing-vpc-nvme-vps-high-performance-from-9-55-mo",
+      "published": "2026-11-21T18:19:52+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Dedicated Server BlackFriday deals 2026 | Get up to 15% Off",
+      "url": "https://lowendtalk.com/discussion/223657/dedicated-server-blackfriday-deals-2026-get-up-to-15-off",
+      "published": "2026-11-21T18:07:32+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "GenixNode | KVM NVMe VPS in 14 Locations | 4GB RAM from $2.99/mo | +1 Week Free for LET",
+      "url": "https://lowendtalk.com/discussion/223647/genixnode-kvm-nvme-vps-in-14-locations-4gb-ram-from-2-99-mo-1-week-free-for-let",
+      "published": "2026-11-21T15:49:44+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "A Little More Room Before Black Friday: $100 Giveaway + 4GB Ryzen/i9 VPS!",
+      "url": "https://lowendbox.com/blog/a-little-more-room-before-black-friday-100-giveaway-4gb-ryzen-i9-vps/",
+      "published": "2026-11-21T12:00:10+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "#双十一#JustVPS低至3.79美元/月，首期5折/续费6折，全球56机房可选",
+      "url": "https://www.vpsxxs.com/justvps20261027/",
+      "published": "2026-11-21T10:27:55+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": false,
+      "title": "丽萨主机美国Spectrum/Charter真家宽上线，Cox同家宽，179.1元/月，61.2元/月可选双ISP香港/台湾/新加坡/美国/日本/韩国/英国/德国等住宅TK服务器，支持支付宝",
+      "url": "https://www.vpsxxs.com/lisazhuji20261111/",
+      "published": "2026-11-21T10:09:15+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "#黑五#RackNerd美国VPS：15.98美元/年，虚拟主机9.49美元/年，独立服务器64美元/月，洛杉矶DC03/圣何塞/西雅图/达拉斯/芝加哥/阿什本/纽约机房，支持支付宝/银联卡/Paypal",
+      "url": "https://www.vpsxxs.com/racknerd20261120/",
+      "published": "2026-11-21T09:42:50+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "#黑五#Friendhosting全场优惠60%，1.4欧元/月起，日本/美国/欧洲/巴西17机房，另有大硬盘VPS/高频CPU服务器，支持支付宝/微信支付",
+      "url": "https://www.vpsxxs.com/friendhosting20261121/",
+      "published": "2026-11-21T09:19:03+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "云途美国洛杉矶精品VPS补货促销：33.75元/月起，CN2+9929+CMIN2，支持支付宝/微信支付",
+      "url": "https://www.vpsxxs.com/yuntu20261121/",
+      "published": "2026-11-21T06:18:18+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "#黑五#AlexHost英国/保加利亚/罗马尼亚抗投诉VPS：7欧元/月，限量60台，摩尔多瓦离岸独服77欧元/月，无视DMCA滥用投诉/可匿名",
+      "url": "https://www.vpsxxs.com/alexhost20261121/",
+      "published": "2026-11-20T22:23:02+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": false,
+      "title": "QQG.NET香港CF三网精品VPS测评：内地方向30M带宽三网往返直连电信CN2 GIA联通10029移动CMIN2，25端口开放可选Windows，带防御适合建站",
+      "url": "https://www.vpsxxs.com/qqg-netxiangangcfjingpinvpsceping/",
+      "published": "2026-11-20T22:09:54+00:00"
+    },
+    {
+      "source": "VPS侦探",
+      "region": "china",
+      "is_promo": false,
+      "title": "EdgeNAT 2026黑色星期五 全场VPS月付7折 28元/月起 充500送100 香港/美国/韩国可选",
+      "url": "https://www.vpser.net/coupons/edgenat-2026-black-friday-coupons.html",
+      "published": "2026-11-20T13:27:03+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Black Friday Early Bird Sale from Fast Moose! $15.99/YEAR for Shared Hosting with Unlimited Accounts, Unmetered Bandwidth!",
+      "url": "https://lowendbox.com/blog/black-friday-early-bird-sale-from-fast-moose-15-99-year-for-shared-hosting-with-unlimited-accounts-unmetered-bandwidth/",
+      "published": "2026-11-20T12:00:48+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "RackNerd黑色星期五专题页面 - 美国年付VPS促销低至15.98美元",
+      "url": "https://www.laozuo.org/29670.html",
+      "published": "2026-11-20T02:59:56+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "RackNerd’s BLACK FRIDAY TAKEOVER! NEW DEALS, NEW TECH, AdminBolt HOSTING + HUNDREDS OF GIVEAWAYS!",
+      "url": "https://lowendtalk.com/discussion/223558/racknerd-s-black-friday-takeover-new-deals-new-tech-adminbolt-hosting-hundreds-of-giveaways",
+      "published": "2026-11-19T17:48:20+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "Pre-Black-Friday Warm-Up: Win a $100 Prize and Grab a 2GB Ryzen VPS for Only $22.99/YEAR!",
+      "url": "https://lowendbox.com/blog/pre-black-friday-warm-up-win-a-100-prize-and-grab-a-2gb-ryzen-i9-vps-for-only-22-99-year/",
+      "published": "2026-11-19T12:00:04+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "2026双十一 RAKSmart 物理服务器活动 E3-1230 100M独享不限流量 月29.9",
+      "url": "https://www.laozuo.org/33621.html",
+      "published": "2026-11-19T02:46:29+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": true,
+      "title": "#黑五#Ava.hosting摩尔多瓦抗投诉VPS：11欧元/年，虚拟主机1.6欧元/月，无版权独服68欧元/月，离岸无视DMCA/可匿名注册/支持加密货币/Paypal",
+      "url": "https://www.vpsxxs.com/ava-hosting20261119/",
+      "published": "2026-11-18T21:37:01+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": false,
+      "title": "PanstarCloud英国Lite VPS测评：看视频12万+速度，英国原生IP，IP纯净度高，三网往返直连（电信去程绕美国）",
+      "url": "https://www.vpsxxs.com/panstarcloudyingguolitevpsceping/",
+      "published": "2026-11-18T21:17:41+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Ava.hosting - Black Friday Deals + BIG Restock VPS Nano! + Giveaways!",
+      "url": "https://lowendtalk.com/discussion/223492/ava-hosting-black-friday-deals-big-restock-vps-nano-giveaways",
+      "published": "2026-11-18T17:14:12+00:00"
+    },
+    {
+      "source": "VPSGO",
+      "region": "china",
+      "is_promo": true,
+      "title": "轻云互联11月黑五促销：香港CN2 GIA三网直连低至20元/月，美国圣何塞回程CN2 GIA低至17.6元/月，西安高防/镇江双线可选",
+      "url": "https://www.vpsgo.com/qingyunl-202611.html",
+      "published": "2026-11-18T15:13:55+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "The DediRock High-RAM VPS is Here at Last! OMG! 8GB RAM for $24.99/YEAR!",
+      "url": "https://lowendbox.com/blog/the-dedirock-high-ram-vps-is-here-at-last-omg-8gb-ram-for-24-99-year/",
+      "published": "2026-11-18T12:00:12+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": false,
+      "title": "HawkHost老鹰主机黑色星期五活动专题 - 海外虚拟主机低至年付$17.53",
+      "url": "https://www.laozuo.org/27879.html",
+      "published": "2026-11-18T09:00:57+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "JTTI 黑色星期五促销专题页面 - 专用服务器最高低至三折 CN2 GIA/中国优化线路直连",
+      "url": "https://www.laozuo.org/33677.html",
+      "published": "2026-11-18T08:41:50+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": false,
+      "title": "HostUS 黑色星期五专题活动 - 年付18美元VPS 9个机房可选及套餐配置推荐",
+      "url": "https://www.laozuo.org/33675.html",
+      "published": "2026-11-18T08:28:49+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "OVHcloud • Black Friday • 30+ Dedicated Servers in EU/NAM/APAC • From US$16.60/month",
+      "url": "https://lowendtalk.com/discussion/223462/ovhcloud-black-friday-30-dedicated-servers-in-eu-nam-apac-from-us-16-60-month",
+      "published": "2026-11-18T07:41:20+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "D4 Networks | KVM VPS Deals from $69/yr | NVMe, IPv4 + /64 | New York, Dallas, Amsterdam",
+      "url": "https://lowendtalk.com/discussion/223445/d4-networks-kvm-vps-deals-from-69-yr-nvme-ipv4-64-new-york-dallas-amsterdam",
+      "published": "2026-11-17T22:45:53+00:00"
+    },
+    {
+      "source": "VPS小学生",
+      "region": "china",
+      "is_promo": false,
+      "title": "V.PS美国圣何塞VPS测评：看视频20万+速度，往返电信CN2 GIA联通9929移动CMIN2，延迟超低，晚高峰不丢包",
+      "url": "https://www.vpsxxs.com/v-psmeiguoshenghesaivpsceping/",
+      "published": "2026-11-17T22:40:09+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "80VPS双十一活动 - 购买独立服务器送美国VPS，满1000元/月赠199元年付VPS",
+      "url": "https://www.laozuo.org/33673.html",
+      "published": "2026-11-17T14:43:22+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": false,
+      "title": "ZGOCloud 黑色星期五活动专题 - 充值送10% 年付VPS低至45美元 多个优化线路",
+      "url": "https://www.laozuo.org/33671.html",
+      "published": "2026-11-17T13:19:47+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "CloudCone 黑色星期五优惠专题 - 推出多款年付便宜美国VPS $12.24/年起",
+      "url": "https://www.laozuo.org/30018.html",
+      "published": "2026-11-17T05:54:06+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "最新edgeNAT 优惠促销活动 - 提供美国香港日本韩国原生IP和CN2 VPS",
+      "url": "https://www.laozuo.org/23986.html",
+      "published": "2026-11-17T00:40:30+00:00"
+    },
+    {
+      "source": "VPSGO",
+      "region": "china",
+      "is_promo": true,
+      "title": "edgeNAT黑五促销：全场VPS 7折终身循环 + 充值500送100，香港直连/韩国SK/美西4837/香港HGC/日本原生等多线路可选",
+      "url": "https://www.vpsgo.com/edgenat-black-friday-2026.html",
+      "published": "2026-11-16T13:22:12+00:00"
+    },
+    {
+      "source": "老左笔记",
+      "region": "china",
+      "is_promo": true,
+      "title": "RAKSmart 双十一新客注册和充值活动 - 新客注册赠送300美金代金券",
+      "url": "https://www.laozuo.org/33613.html",
+      "published": "2026-11-16T07:50:14+00:00"
+    },
+    {
+      "source": "VPS侦探",
+      "region": "china",
+      "is_promo": true,
+      "title": "云途网络 日本东京BGP 75折优惠码 18.75元/月起",
+      "url": "https://www.vpser.net/coupons/yt-cloud-2026-november-coupons.html",
+      "published": "2026-11-16T06:15:19+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "MORE CHANCES TO WIN in RackNerd’s Fall Giveaway! Win a Meta Quest 3, a Synology NAS, a Gaming Monitor and More! Plus Cheap VPS Deals from $21.99/YEAR!",
+      "url": "https://lowendbox.com/blog/more-chances-to-win-in-racknerds-fall-giveaway-win-a-meta-quest-3-a-synology-nas-a-gaming-monitor-and-more-plus-cheap-vps-deals-from-21-99-year/",
+      "published": "2026-11-15T12:00:58+00:00"
+    },
+    {
+      "source": "VPSGO",
+      "region": "china",
+      "is_promo": true,
+      "title": "莱卡云双11特惠：8核8G云服务器广州/镇江869元/年、香港969元/年，另有4核4G 389元/年与16核32G企业云2199元/年",
+      "url": "https://www.vpsgo.com/lcayun-1111-2026.html",
+      "published": "2026-11-14T15:10:29+00:00"
+    },
+    {
+      "source": "LEB Black Friday",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Two Weeks to Black Friday: Prices You Won’t See Until Next Black Friday!",
+      "url": "https://lowendbox.com/blog/two-weeks-to-black-friday-prices-you-wont-see-until-next-black-friday/",
+      "published": "2026-11-13T18:13:03+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "The Future Arrives Early >> THE 4K WRITE SENSATION™ & THE DEDIROCK HIGH-RAM VPS™",
+      "url": "https://lowendtalk.com/discussion/223259/the-future-arrives-early-the-4k-write-sensation-the-dedirock-high-ram-vps",
+      "published": "2026-11-13T09:53:27+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "If You Missed the Godlike.Host Offer in October – It’s Back! 2GB KVM VPS for $1.83/Month First Year!",
+      "url": "https://lowendbox.com/blog/if-you-missed-the-godlike-host-offer-in-october-its-back-2gb-kvm-vps-for-1-83-month-first-year/",
+      "published": "2026-11-11T12:00:12+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "11.11 Sale | $11.11 VPS | 11 x $11.11 giveaway | SmokyHosts VPS exclusive sale!",
+      "url": "https://lowendtalk.com/discussion/223148/11-11-sale-11-11-vps-11-x-11-11-giveaway-smokyhosts-vps-exclusive-sale",
+      "published": "2026-11-10T15:54:28+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "GenixNode: Amazing Low Prices in 14 Locations Around the Globe! $2.39/Month for a 4GB VPS!",
+      "url": "https://lowendbox.com/blog/genixnode-amazing-low-prizes-in-14-locations-around-the-globe-2-39-month-for-a-4gb-vps/",
+      "published": "2026-11-09T12:00:26+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "KhanWebHost | Brings Exclusive Deals| NZ, SE, SG, ETC",
+      "url": "https://lowendtalk.com/discussion/223081/khanwebhost-brings-exclusive-deals-nz-se-sg-etc",
+      "published": "2026-11-08T18:15:39+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "BONUS CODE DROP for RackNerd’s Fall Giveaway! Win a Meta Quest 3, a Synology NAS, a Gaming Monitor and More! Plus Cheap VPS Deals from $21.99/YEAR!",
+      "url": "https://lowendbox.com/blog/bonus-code-drop-for-racknerds-fall-giveaway-win-a-meta-quest-3-a-synology-nas-a-gaming-monitor-and-more-plus-cheap-vps-deals-from-21-99-year/",
+      "published": "2026-11-08T12:00:31+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "[NetDynamics LLC Crazy Sales] Dedicated Storage Servers 24 TB up to 168 TB from $42/mo",
+      "url": "https://lowendtalk.com/discussion/223062/netdynamics-llc-crazy-sales-dedicated-storage-servers-24-tb-up-to-168-tb-from-42-mo",
+      "published": "2026-11-08T07:14:18+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Great Singapore Deals from Kainode! Starting at $5.99/Month for a 4GB VPS with 1TB Bandwidth!",
+      "url": "https://lowendbox.com/blog/great-singapore-deals-from-kainode-starting-at-5-99-month-for-a-4gb-vps-with-1tb-bandwidth/",
+      "published": "2026-11-07T12:00:46+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "HostDare VPS Sale - Limited Time Offer! Our New Discount coupons !",
+      "url": "https://lowendtalk.com/discussion/223023/hostdare-vps-sale-limited-time-offer-our-new-discount-coupons",
+      "published": "2026-11-07T02:42:39+00:00"
+    },
+    {
+      "source": "VPSGO",
+      "region": "china",
+      "is_promo": true,
+      "title": "CstoneCloud双十一特惠：全场限时六折，英国住宅双ISP/美国9929优化双ISP/香港优化VPS，最低¥24/月起",
+      "url": "https://www.vpsgo.com/cstonecloud-1111-2026.html",
+      "published": "2026-11-06T15:07:36+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Need Cheap, Quality Email Hosting? Check Out FranklyMail – and Their Special Offer Exclusively for Our Readers!",
+      "url": "https://lowendbox.com/blog/need-cheap-quality-email-hosting-check-out-franklymail-and-their-special-offer-exclusively-for-our-readers/",
+      "published": "2026-11-06T12:00:19+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "The Virtbase Interview: A Cool Hosting Company With Its Own In-House-Developed Panel That’s Doing Everything Right",
+      "url": "https://lowendbox.com/blog/the-virtbase-interview-a-cool-hosting-company-with-its-own-in-house-developed-panel-thats-doing-everything-right/",
+      "published": "2026-11-05T12:00:14+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Zap Hosting: Another Lifetime Offer That Turns Out Not to Be Lifetime",
+      "url": "https://lowendbox.com/blog/zap-hosting-another-lifetime-offer-that-turns-out-not-to-be-lifetime/",
+      "published": "2026-11-04T12:00:42+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "DeluxHost.net | Pre-Black Friday | X Series back from €6/yr | Storage VPS & Storage Boxes! | NL",
+      "url": "https://lowendtalk.com/discussion/222883/deluxhost-net-pre-black-friday-x-series-back-from-6-yr-storage-vps-storage-boxes-nl",
+      "published": "2026-11-02T19:12:22+00:00"
+    },
+    {
+      "source": "LowEndSpirit Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Black Friday - Cyber Monday - 2026 - Megathread <-------------------",
+      "url": "https://lowendspirit.com/discussion/11557/black-friday-cyber-monday-2026-megathread",
+      "published": "2026-11-02T14:40:37+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": false,
+      "title": "HostNamaste Diwali 2026 Early-Bird Special — Los Angeles KVM VPS from $17.99/Year!",
+      "url": "https://lowendbox.com/blog/hostnamaste-diwali-2026-early-bird-special-los-angeles-kvm-vps-from-17-99-year/",
+      "published": "2026-11-02T12:00:26+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "Cheap VPS Deals in Toronto from EnderHost! Get a 4GB VPS for Only $3.84/Month!",
+      "url": "https://lowendbox.com/blog/cheap-vps-deals-in-toronto-from-enderhost-get-a-4gb-vps-for-only-3-84-month/",
+      "published": "2026-11-02T12:00:00+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "[PureVoltage] Pre-Black Friday ϟ NYC Dedicated from $60/mo ϟ FREE Double Bandwidth + Giveaways!",
+      "url": "https://lowendtalk.com/discussion/222865/purevoltage-pre-black-friday-%CF%9F-nyc-dedicated-from-60-mo-%CF%9F-free-double-bandwidth-giveaways",
+      "published": "2026-11-02T04:29:06+00:00"
+    },
+    {
+      "source": "LowEndBox",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "RackNerd’s Fall Giveaway Has Started! Win a Meta Quest 3, a Synology NAS, a Gaming Monitor and More! Plus Cheap VPS Deals from $21.99/YEAR!",
+      "url": "https://lowendbox.com/blog/racknerds-fall-giveaway-has-started-win-a-meta-quest-3-a-synology-nas-a-gaming-monitor-and-more-plus-cheap-vps-deals-from-21-99-year/",
+      "published": "2026-11-01T12:00:16+00:00"
+    },
+    {
+      "source": "VPSGO",
+      "region": "china",
+      "is_promo": true,
+      "title": "edgeNAT双十一周年庆：全场VPS 7折终身循环优惠，香港直连/韩国SK/美西4837/香港HGC/日本原生等多线路",
+      "url": "https://www.vpsgo.com/edgenat-1111-2026.html",
+      "published": "2026-11-01T07:29:26+00:00"
+    },
+    {
+      "source": "VPS侦探",
+      "region": "china",
+      "is_promo": true,
+      "title": "EdgeNAT 2026双11 全场VPS月付7折 28元/月起 香港/美国/韩国可选",
+      "url": "https://www.vpser.net/coupons/edgenat-2026-1111-coupon.html",
+      "published": "2026-10-31T07:38:14+00:00"
+    },
+    {
+      "source": "LowEndTalk Offers",
+      "region": "overseas",
+      "is_promo": true,
+      "title": "BLACK FRIDAY | UK VPS | EPYC 7642 up to 60% OFF | Ryzen 9950X | Xeon Gold | + 9 EPYC VPS GIVEAWAYS!",
+      "url": "https://lowendtalk.com/discussion/222765/black-friday-uk-vps-epyc-7642-up-to-60-off-ryzen-9950x-xeon-gold-9-epyc-vps-giveaways",
+      "published": "2026-10-30T18:17:23+00:00"
+    }
+  ]
+}

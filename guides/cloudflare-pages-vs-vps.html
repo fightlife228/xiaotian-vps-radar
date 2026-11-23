@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Cloudflare Pages 和 VPS 建站怎么选？免费静态托管 vs 付费服务器对比｜小天 VPS 雷达</title>
+  <link rel="canonical" href="https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html" />
+  <meta name="description" content="个人博客、作品集、独立站和 AI 工具到底用免费的 Cloudflare Pages/Workers 还是买付费 VPS？从真实年费、备案、数据库、定时任务与混合架构一次说清。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="小天 VPS 雷达" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="Cloudflare Pages 和 VPS 建站怎么选？免费静态托管 vs 付费服务器对比" />
+  <meta property="og:description" content="个人博客、作品集和 AI 工具到底用免费 Cloudflare Pages/Workers 还是买 VPS？附场景对照、真实成本与混合架构实战。" />
+  <meta property="og:url" content="https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html" />
+  <meta property="og:image" content="https://vps.xiaotianai.win/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://vps.xiaotianai.win/assets/og-cover.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="/assets/theme.js?v=20"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloudflare Pages 和 VPS 建站怎么选？免费静态托管 vs 付费服务器对比","description":"对比免费静态托管（Cloudflare Pages / Workers）与付费 VPS 在建站成本、维护负担、后端数据库、定时任务、备案和 AI Agent 场景下的真实差异。","inLanguage":"zh-CN","url":"https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html","mainEntityOfPage":"https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html","image":"https://vps.xiaotianai.win/assets/og-cover.png","datePublished":"2026-11-22","dateModified":"2026-11-22","author":{"@type":"Organization","name":"小天 VPS 雷达（独立信息整理）","url":"https://vps.xiaotianai.win/about.html"},"publisher":{"@type":"Organization","name":"小天 VPS 雷达","url":"https://vps.xiaotianai.win/about.html"},"isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://vps.xiaotianai.win/"},{"@type":"ListItem","position":2,"name":"选购知识库","item":"https://vps.xiaotianai.win/#seo-guides"},{"@type":"ListItem","position":3,"name":"Cloudflare Pages 和 VPS 建站怎么选","item":"https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"只做一个个人博客或作品集，有必要买 VPS 吗？","acceptedAnswer":{"@type":"Answer","text":"大多数情况下没有必要。使用 Cloudflare Pages 托管纯静态 HTML、Astro、Hugo 或 Hexo 站点，静态流量不限且免费自带 HTTPS，免去维护系统安全补丁、Nginx 证书续期和服务器续费焦虑。"}},{"@type":"Question","name":"什么时候必须买一台独立 VPS？","acceptedAnswer":{"@type":"Answer","text":"当你需要长时间常驻后台进程、运行 Docker 容器、执行复杂本地脚本、挂载 SQLite/PostgreSQL/Redis 数据库、跑 Telegram/企业微信 Bot、或者搭建自托管调度中心（如 n8n、AI Agent 服务）时，独立 VPS 更有控制权且限制更少。"}},{"@type":"Question","name":"Cloudflare Pages/Workers 和 VPS 可以组合使用吗？","acceptedAnswer":{"@type":"Answer","text":"完全可以，而且是最省钱稳妥的方案之一：把公开官网、博客和展示页放在 Cloudflare Pages/Workers 上免费抗流量，把需要常驻和数据库的后台服务留在 VPS 上，并通过 Cloudflare Tunnel 与 Access 保护后台入口。"}}]}</script>
+</head>
+<body>
+  <header class="topbar"><div class="shell nav-inner"><a class="brand" href="/"><span class="brand-mark">✳</span><span>小天 <b>VPS RADAR</b></span></a><nav class="nav-links"><a href="/#deals">精选机型</a><a href="/#leads">全网雷达</a><a href="/table.html">参数总表</a><a href="/#seo-guides" class="active">深度指南</a><a href="/about.html">关于</a></nav><div class="nav-actions"><a class="github-btn" href="https://github.com/fightlife228/xiaotian-vps-radar" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button type="button" class="theme-toggle" data-theme-toggle aria-label="切换主题">🌙</button></div></div></header>
+  <main>
+    <div class="shell guide-hero">
+      <div class="section-kicker">ARCHITECTURE / 07</div>
+      <h1>Cloudflare Pages 和 VPS 建站，<br><span class="text-gradient">到底哪个更划算？</span></h1>
+      <p>买服务器前最省钱的一步，其实是先问自己：这件事真的需要一台 24 小时开机的 VPS 吗？本文结合小天自己的真实部署架构，把免费静态托管与付费 VPS 的适用边界一次讲透。</p>
+      <p class="seo-fineprint">独立整理 · 2026-11-22 · 以各平台最新免费额度与收费条款为准</p>
+    </div>
+
+    <div class="shell guide-main">
+      <aside class="guide-aside">
+        <a href="#compare">1. 核心差异一张表看懂</a>
+        <a href="#when-cf">2. 什么时候选 Cloudflare 免费托管</a>
+        <a href="#when-vps">3. 什么时候必须买独立 VPS</a>
+        <a href="#hybrid">4. 最香的“混合架构”实战</a>
+        <a href="#related">5. 延伸阅读</a>
+      </aside>
+
+      <article class="guide-article">
+        <section id="compare">
+          <h2>1. 一张表看懂核心差异</h2>
+          <table>
+            <thead>
+              <tr><th>对比维度</th><th>Cloudflare Pages / Workers</th><th>付费 VPS（国内云 / 海外 KVM）</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>起步成本</strong></td><td>免费套餐即可上线（仅需域名费）</td><td>约 ¥36–¥199/年 或 $15–$95/年</td></tr>
+              <tr><td><strong>运维负担</strong></td><td>极低：免配 Nginx、免管 SSL 续期、免打系统补丁</td><td>中等：需自管防火墙、SSH 安全、备份与监控</td></tr>
+              <tr><td><strong>适合运行内容</strong></td><td>静态网站、博客、文档站、轻量 API、定时 RSS 聚合</td><td>Docker、常驻后台、数据库、Bot、队列调度、自托管应用</td></tr>
+              <tr><td><strong>持续运行限制</strong></td><td>受单次请求 CPU/执行时间与平台配额约束</td><td>只要不违反商家条款，可 24×7 长期常驻执行</td></tr>
+              <tr><td><strong>中国大陆访问与备案</strong></td><td>境外边缘节点，通常无需内地 ICP 备案；不同地区晚高峰速度有波动</td><td>国内节点延迟极低但公开建站需 ICP 备案；海外节点免备案但挑线路</td></tr>
+              <tr><td><strong>突发流量抗压</strong></td><td>天然全球 CDN 分发，突发访问不易把机器打死</td><td>受限于小水管带宽（如 3M）或月流量包上限</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="when-cf">
+          <h2>2. 什么场景直接用 Cloudflare，别花冤枉钱买 VPS？</h2>
+          <ul>
+            <li><strong>个人主页、作品集、产品落地页</strong>：纯前端 HTML/CSS/JS 或 React/Vue 构建产物，放在 Pages 上几乎零成本且全球 CDN 加速。</li>
+            <li><strong>技术博客与文档站</strong>：Hugo、Astro、Hexo、VitePress 生成静态页后部署，天然不怕 WordPress 插件漏洞和 MySQL 崩溃。</li>
+            <li><strong>轻量级信息聚合与定时线索站</strong>：就像你现在看到的「小天 VPS 雷达」——静态页面 + Workers Cron 定时采集 + KV 缓存，全链路跑在免费额度内，连一台小鸡都不用额外买。</li>
+          </ul>
+          <div class="guide-tip">
+            <strong>提醒：</strong>免费托管并非绝对无限制，请随时留意 Cloudflare 官方关于 Workers 每日请求数、CPU 时间、KV 读写次数和合规内容政策的条款更新。
+          </div>
+        </section>
+
+        <section id="when-vps">
+          <h2>3. 什么场景必须老老实实买一台 VPS？</h2>
+          <ol>
+            <li><strong>需要常驻进程或长耗时任务</strong>：比如 24 小时运行的 AI Agent 调度中心、Telegram/飞书机器人、定时浏览器自动化、持续监听队列的服务。</li>
+            <li><strong>重度依赖 Docker 与传统数据库</strong>：想一键 <code>docker compose up</code> 部署开源项目（n8n、Uptime Kuma、私有网盘、SQLite/PostgreSQL/Redis），VPS 自由度高得多。</li>
+            <li><strong>需要固定公网 IP 或完整 Linux 环境</strong>：对接需要固定白名单 IP 的第三方接口、远程开发、编译打包或自定义网络工具。</li>
+          </ol>
+        </section>
+
+        <section id="hybrid">
+          <h2>4. 个人开发者最稳的“混合架构”</h2>
+          <p>其实两者不是非此即彼，把它们拆开分工反而是性价比最高、最安全的做法：</p>
+          <ul>
+            <li><strong>公开展示层 → Cloudflare Pages / Workers</strong>：承载个人主页、博客、VPS 优惠雷达等面向搜索引擎和公开访客的站点，免费抗流量、零服务器被扫端口风险。</li>
+            <li><strong>私有计算与调度层 → 1 台高性价比 VPS</strong>：专门运行 AI Agent 调度、数据库与自动化任务，并通过 <strong>Cloudflare Tunnel + Zero Trust Access</strong> 藏在后面，甚至可以关掉大部分公网暴露端口。</li>
+          </ul>
+          <p>这样就算你的公开博客突然爆了流量，也完全影响不到后端 VPS 上正在跑的核心服务。</p>
+        </section>
+
+        <section id="related">
+          <h2>5. 延伸阅读</h2>
+          <div class="related-links">
+            <a href="/guides/ai-agent-vps.html">用 VPS 跑 AI Agent，到底要买多少配置？ →</a>
+            <a href="/guides/china-cloud-vs-overseas.html">阿里云、腾讯云、华为云和海外 VPS 怎么比较？ →</a>
+            <a href="/guides/vps-renewal-cost.html">VPS 续费价和三年总成本怎么算才不踩坑？ →</a>
+            <a href="/guides/vps-network-troubleshooting.html">真实排障复盘：海外 VPS 连不上如何用 Tunnel 破局 →</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="footer shell">
+    <div><a class="brand" href="/">✳ 小天 <b>VPS RADAR</b></a><p>让便宜、续费、线路和部署用途都说清楚。</p></div>
+    <div class="foot-right"><a href="/about.html">核验原则与广告政策</a><span>© 2026 小天 VPS 雷达</span></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# 小天 VPS 雷达 (xiaotian-vps-radar) — Open-Source VPS Intelligence & Automated Promo Radar
+
+> Verified offer table snapshot: 2026-11-23 (merchant checkout terms control; expired offers isolated in `archived`). Automated 9-source RSS promo leads, USD/CNY reference FX rate, and provider promo page health refresh every 4 hours via Cloudflare Workers Cron + Workers AI.
+
+- Main intelligence dashboard & developer toolbox: https://vps.xiaotianai.win/
+- Full static specification & renewal comparison table (CSV/JSON export): https://vps.xiaotianai.win/table.html
+- Structured verified offers & expired archive JSON: https://vps.xiaotianai.win/data/offers.json
+- Live automated 9-source RSS leads & AI Chinese brief API: https://vps.xiaotianai.win/api/leads
+- Live 4-hour FX rate & provider promo page health API: https://vps.xiaotianai.win/api/live-status
+- Open-source GitHub repository (MIT): https://github.com/fightlife228/xiaotian-vps-radar
+- AI Agent VPS and safe migration: https://vps.xiaotianai.win/guides/ai-agent-vps.html
+- Renewal and three-year TCO calculation: https://vps.xiaotianai.win/guides/vps-renewal-cost.html
+- Alipay and RMB payment verification: https://vps.xiaotianai.win/guides/vps-alipay-rmb.html
+- Mainland cloud vs overseas VPS: https://vps.xiaotianai.win/guides/china-cloud-vs-overseas.html
+- Common buyer questions (10 FAQs): https://vps.xiaotianai.win/guides/vps-common-questions.html
+- Real-world overseas VPS network troubleshooting & Cloudflare Tunnel field log: https://vps.xiaotianai.win/guides/vps-network-troubleshooting.html
+- Cloudflare Pages vs VPS hosting comparison & hybrid architecture: https://vps.xiaotianai.win/guides/cloudflare-pages-vs-vps.html
+- Editorial policy, disclosures & issue reporting: https://vps.xiaotianai.win/about.html
+- Creator homepage (小天聊AI): https://www.xiaotianai.win/

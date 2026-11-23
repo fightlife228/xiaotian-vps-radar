@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="410" viewBox="0 0 1100 410" role="img" aria-label="旧直连与链式路径在建连阶段频繁超时，换用 Cloudflare Tunnel 后手机端顺利连通">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1526"/>
+      <stop offset="100%" stop-color="#13233d"/>
+    </linearGradient>
+    <linearGradient id="cardOld" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#192b47"/>
+      <stop offset="100%" stop-color="#132138"/>
+    </linearGradient>
+    <linearGradient id="cardNew" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16324f"/>
+      <stop offset="100%" stop-color="#11263e"/>
+    </linearGradient>
+    <marker id="arrErr" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#f07178"/>
+    </marker>
+    <marker id="arrOk" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3dd6a5"/>
+    </marker>
+    <style>
+      .title { fill: #eef4fb; font: 700 26px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
+      .sub { fill: #8fa8c4; font: 400 15px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
+      .node-old { fill: url(#cardOld); stroke: #476080; stroke-width: 1.8; }
+      .node-new { fill: url(#cardNew); stroke: #3b7d9c; stroke-width: 1.8; }
+      .node-cf  { fill: #1b3554; stroke: #4fa3d1; stroke-width: 2; }
+      .t { fill: #f0f6fc; font: 600 21px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; text-anchor: middle; }
+      .s { fill: #9db6d1; font: 400 15px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; text-anchor: middle; }
+      .err-line { stroke: #f07178; stroke-width: 4; stroke-dasharray: 10 8; }
+      .ok-line  { stroke: #3dd6a5; stroke-width: 4; }
+      .tag-err  { fill: #49202b; stroke: #b84b59; stroke-width: 1.5; }
+      .tag-ok   { fill: #143d37; stroke: #2ca582; stroke-width: 1.5; }
+      .lab-err  { fill: #ffccd0; font: 600 16px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; text-anchor: middle; }
+      .lab-ok   { fill: #b8f7e2; font: 600 15px -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect fill="url(#bgGrad)" rx="22" width="1100" height="410"/>
+
+  <text class="title" x="52" y="54">同一台海外 VPS，换路前后的连接差异</text>
+  <text class="sub" x="52" y="80">上：客户端直接或经跳板敲服务器端口（频繁卡在 TCP 建连） ｜ 下：经 Cloudflare Tunnel 转发回源</text>
+
+  <!-- 旧路径 -->
+  <rect class="node-old" x="52" y="112" width="220" height="92" rx="14"/>
+  <text class="t" x="162" y="152">本地 / 上游跳板</text>
+  <text class="s" x="162" y="180">旧直连与链式方案</text>
+
+  <line class="err-line" x1="272" y1="158" x2="778" y2="158" marker-end="url(#arrErr)"/>
+  <rect class="tag-err" x="415" y="132" width="228" height="52" rx="10"/>
+  <text class="lab-err" x="529" y="164">TCP 建连阶段多次 timeout</text>
+
+  <rect class="node-old" x="788" y="112" width="260" height="92" rx="14"/>
+  <text class="t" x="918" y="152">我的海外 VPS</text>
+  <text class="s" x="918" y="180">外部直接敲公网端口</text>
+
+  <!-- 新路径 -->
+  <rect class="node-new" x="52" y="262" width="220" height="96" rx="14"/>
+  <text class="t" x="162" y="303">手机客户端</text>
+  <text class="s" x="162" y="332">Shadowrocket 新配置</text>
+
+  <line class="ok-line" x1="272" y1="310" x2="404" y2="310" marker-end="url(#arrOk)"/>
+  <text class="lab-ok" x="340" y="294">HTTPS / WS</text>
+
+  <rect class="node-cf" x="414" y="262" width="232" height="96" rx="14"/>
+  <text class="t" x="530" y="303">Cloudflare 接入层</text>
+  <text class="s" x="530" y="332">公开边缘节点</text>
+
+  <line class="ok-line" x1="646" y1="310" x2="778" y2="310" marker-end="url(#arrOk)"/>
+  <text class="lab-ok" x="714" y="294">服务器维持隧道</text>
+
+  <rect class="node-new" x="788" y="262" width="260" height="96" rx="14"/>
+  <text class="t" x="918" y="303">我的海外 VPS</text>
+  <text class="s" x="918" y="332">localhost 本地回源服务</text>
+</svg>

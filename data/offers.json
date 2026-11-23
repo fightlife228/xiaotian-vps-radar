@@ -1,0 +1,676 @@
+{
+  "snapshot": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "auto_refresh": true,
+  "auto_refresh_interval_hours": 4,
+  "method": "国内外套餐按币种分别报价；国内优先官网活动和结算页，注明新客、带宽/流量、备案与限次续费；过期优惠单独归档不混入在售榜；第三方网站只作线索，不保证实时库存。",
+  "offers": [
+    {
+      "id": "rn-bf26-4g",
+      "provider": "RackNerd",
+      "name": "2026 黑五 KVM · 4GB",
+      "cpu": 4,
+      "ram": 4,
+      "disk": 60,
+      "disk_type": "SSD",
+      "region": "美国 · 多机房（下单选）",
+      "price": 47.98,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 47.98,
+      "renewal_note": "官网声明保持服务可按相同促销价循环续费",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "黑五",
+      "window_badge": "黑五窗口期",
+      "recommended": true,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "独立 IPv4",
+        "建站 / 轻量 Agent"
+      ],
+      "score": "4核 4G 平衡款，适合个人站、Docker 容器与调用外部 API 的轻量 Agent；线路需按自身网络实测。",
+      "source": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "buy": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "checked": "2026-11-23",
+      "note": "价格按官网公开页面记录，具体机房库存需在结算页核实；支持支付宝（美元标价折算扣款）。",
+      "market": "overseas",
+      "eligible": "新老用户以结算页为准",
+      "bandwidth": "1Gbps 共享口 · 流量见下单页",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "自动探活确认黑五活动页在线，复核循环同价口径。"
+        },
+        {
+          "date": "2026-11-22",
+          "note": "补充站长实购 4GB 机型脱敏订单核验记录与官方推广直达。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录 RackNerd 2026 黑五 KVM 4GB 公开活动价 $47.98/年。"
+        }
+      ]
+    },
+    {
+      "id": "rn-bf26-6g",
+      "provider": "RackNerd",
+      "name": "2026 黑五 KVM · 6GB",
+      "cpu": 6,
+      "ram": 6,
+      "disk": 85,
+      "disk_type": "SSD",
+      "region": "美国 · 多机房（下单选）",
+      "price": 74.98,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 74.98,
+      "renewal_note": "官网声明保持服务可按相同促销价循环续费",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "黑五",
+      "window_badge": "黑五窗口期",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "独立 IPv4",
+        "多容器"
+      ],
+      "score": "适合同时托管多个 Docker 服务、n8n 与中型自动化任务；CPU 性能与晚高峰回程仍需实测。",
+      "source": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "buy": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "checked": "2026-11-23",
+      "note": "配置为 6 vCPU / 6GB RAM / 85GB SSD，三年账面总成本 $224.94。",
+      "market": "overseas",
+      "eligible": "新老用户以结算页为准",
+      "bandwidth": "1Gbps 共享口 · 流量见下单页",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "复核官网黑五页面在线状态与续费条款。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录 6GB 套餐公开价 $74.98/年。"
+        }
+      ]
+    },
+    {
+      "id": "rn-bf26-8g",
+      "provider": "RackNerd",
+      "name": "2026 黑五 KVM · 8GB",
+      "cpu": 6,
+      "ram": 8,
+      "disk": 140,
+      "disk_type": "SSD",
+      "region": "美国 · 多机房（下单选）",
+      "price": 94.98,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 94.98,
+      "renewal_note": "官网声明保持服务可按相同促销价循环续费",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "黑五",
+      "window_badge": "黑五窗口期",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "独立 IPv4",
+        "多服务后台"
+      ],
+      "score": "8GB 大内存 SSD，适合多容器集群、队列与中小型数据库；仍不适合本地跑大语言模型推理。",
+      "source": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "buy": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "checked": "2026-11-23",
+      "note": "升级前建议结合 YABS 磁盘 IO 和目标机房回程路由实测评估。",
+      "market": "overseas",
+      "eligible": "新老用户以结算页为准",
+      "bandwidth": "1Gbps 共享口 · 流量见下单页",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "复核官网黑五活动页在线状态。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录 8GB 套餐公开价 $94.98/年。"
+        }
+      ]
+    },
+    {
+      "id": "rn-bf26-1g",
+      "provider": "RackNerd",
+      "name": "2026 黑五 KVM · 1GB",
+      "cpu": 1,
+      "ram": 1,
+      "disk": 20,
+      "disk_type": "SSD",
+      "region": "美国 · 多机房（下单选）",
+      "price": 15.98,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 15.98,
+      "renewal_note": "官网声明保持服务可按相同促销价循环续费",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "黑五",
+      "window_badge": "黑五入门款",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "探针 / 轻量服务"
+      ],
+      "score": "年付不到 $16 的循环同价入门机，适合 Uptime 探针、Webhook 转发或极轻静态后端；不宜跑多容器。",
+      "source": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "buy": "https://www.racknerd.com/BlackFriday/?category=vps",
+      "checked": "2026-11-23",
+      "note": "1GB 内存余量有限，生产环境建议配置 Swap 并限制并发。",
+      "market": "overseas",
+      "eligible": "新老用户以结算页为准",
+      "bandwidth": "1Gbps 共享口 · 流量见下单页",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "复核官网黑五页面在线状态。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录 1GB 入门款 $15.98/年。"
+        }
+      ]
+    },
+    {
+      "id": "ali-ecs99",
+      "provider": "阿里云",
+      "name": "ECS 经济型 e · 99 计划",
+      "cpu": 2,
+      "ram": 2,
+      "disk": 40,
+      "disk_type": "ESSD Entry",
+      "market": "china",
+      "region": "中国内地 · 多地域可选",
+      "price": 99,
+      "currency": "CNY",
+      "period": "year",
+      "renewal": 99,
+      "renewal_type": "until-date",
+      "renewal_note": "官方页面承诺 ¥99/年新购续费同价，锁价规则截至 2029-03-31（需符合活动资格）",
+      "eligible": "新老用户均可参与，限购 1 台",
+      "bandwidth": "3 Mbps 固定带宽",
+      "monthly_traffic_gb": "不限流量（按固定带宽计费）",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "国内公有云",
+      "window_badge": "锁价至 2029-03",
+      "recommended": true,
+      "icp_note": "中国内地 · 公开建站需 ICP 备案",
+      "tags": [
+        "¥99/年",
+        "限期同价续费",
+        "固定 3M 不限流量"
+      ],
+      "score": "国内直连最省心的长期低价标杆，新老同享且锁价周期长；2GB 内存适合个人站、反代与轻量 API。",
+      "source": "https://www.aliyun.com/activity/ecs/99program",
+      "buy": "https://www.aliyun.com/activity/ecs/99program",
+      "checked": "2026-11-23",
+      "note": "仅作为官方公开活动页价格快照，结算资格、实名要求与具体续费次数以阿里云结算页规则为准。",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "自动探活确认 99 计划页面在线，复核锁价截至 2029-03-31 条款。"
+        },
+        {
+          "date": "2026-11-22",
+          "note": "接入阿里云官方活动直达链接（标注 sponsored）。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录阿里云 ECS 经济型 e 99 计划。"
+        }
+      ]
+    },
+    {
+      "id": "tencent-lh199",
+      "provider": "腾讯云",
+      "name": "Lighthouse · 国内同价续费专区",
+      "cpu": 2,
+      "ram": 4,
+      "disk": 70,
+      "disk_type": "SSD",
+      "market": "china",
+      "region": "中国内地 · 北/上/广/蓉",
+      "price": 199,
+      "currency": "CNY",
+      "period": "year",
+      "renewal": null,
+      "renewal_type": "once",
+      "renewal_note": "活动页写明新购续费同价限 1 次；第三年不能按 ¥199 推算",
+      "eligible": "每规格新购 1 次、同价续费 1 次",
+      "bandwidth": "6 Mbps 峰值",
+      "monthly_traffic_gb": "600 GB/月",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "国内公有云",
+      "window_badge": "限同价续费 1 次",
+      "recommended": true,
+      "icp_note": "中国内地 · 公开建站需 ICP 备案",
+      "tags": [
+        "¥199/年",
+        "4GB 内存",
+        "600GB/月"
+      ],
+      "score": "国内 4GB 内存高性价比选项，适合跑轻量业务、小程序后端或中等并发应用；留意月流量包与第 3 年续费。",
+      "source": "https://cloud.tencent.com/act/pro/double11-xfzq",
+      "buy": "https://cloud.tencent.com/act/pro/double11-xfzq",
+      "checked": "2026-11-23",
+      "note": "微信支付原生友好；超额流量计费与具体可续费次数请在购买页再次确认。",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "复核腾讯云同价续费专区在线状态与限 1 次续费说明。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录腾讯云 Lighthouse 2C4G ¥199/年 方案。"
+        }
+      ]
+    },
+    {
+      "id": "huawei-flexus36",
+      "provider": "华为云",
+      "name": "Flexus L · 11.11 新客秒杀",
+      "cpu": 2,
+      "ram": 2,
+      "disk": 40,
+      "disk_type": "云盘",
+      "market": "china",
+      "region": "中国内地 · 华北-北京四",
+      "price": 36,
+      "currency": "CNY",
+      "period": "year",
+      "renewal": null,
+      "renewal_type": "unknown",
+      "renewal_note": "新客首年秒杀价，次年不按 ¥36 保证；续费以控制台费用中心为准",
+      "eligible": "V0 新客专享、限购 1 台、限量抢购",
+      "bandwidth": "2 Mbps",
+      "monthly_traffic_gb": "100 GB/月",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "国内公有云",
+      "window_badge": "新客首年秒杀",
+      "recommended": false,
+      "icp_note": "中国内地 · 公开建站需 ICP 备案",
+      "tags": [
+        "首年 ¥36",
+        "新客限量",
+        "100GB/月"
+      ],
+      "score": "首年练手成本极低，但 100GB 月流量和次年原价续费决定了它只适合短期测试，不建议当长期主力。",
+      "source": "https://activity.huaweicloud.com/",
+      "buy": "https://activity.huaweicloud.com/",
+      "checked": "2026-11-23",
+      "note": "秒杀资格随账号实名等级与活动时段波动，长期成本务必核对续费原价。",
+      "changelog": [
+        {
+          "date": "2026-11-23",
+          "note": "复核华为云活动页在线，强调仅适合首年体验。"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "首次收录华为云 Flexus L ¥36/年 新客秒杀快照。"
+        }
+      ]
+    },
+    {
+      "id": "dedirock-ram-core",
+      "provider": "DediRock",
+      "name": "High-RAM Core · 8GB",
+      "cpu": 1,
+      "ram": 8,
+      "disk": 20,
+      "disk_type": "HDD",
+      "region": "美国 · 纽约布法罗",
+      "price": 24.99,
+      "currency": "USD",
+      "period": "year",
+      "renewal": null,
+      "renewal_note": "原始促销帖未明确承诺续费同价，下单前务必核对账单",
+      "confidence": "article",
+      "stock": "checkout",
+      "kind": "社区线索",
+      "window_badge": "大内存 HDD 特化",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "8GB 大内存",
+        "HDD 慢盘",
+        "仅 1 vCPU"
+      ],
+      "score": "极典型的“偏科机”：内存极大但只有 1 核 + HDD 机械盘，仅适合纯内存缓存或低 IO 守护进程，慎放数据库。",
+      "source": "https://lowendbox.com/blog/the-dedirock-high-ram-vps-is-here-at-last-omg-8gb-ram-for-24-99-year/",
+      "buy": "https://lowendbox.com/blog/the-dedirock-high-ram-vps-is-here-at-last-omg-8gb-ram-for-24-99-year/",
+      "checked": "2026-11-20",
+      "note": "源自 LowEndBox 原始促销帖，库存、续费价及支付宝支持情况均待结算页实测核实。",
+      "market": "overseas",
+      "eligible": "以商家结算页为准",
+      "bandwidth": "请查套餐明细",
+      "renewal_type": "unknown",
+      "changelog": [
+        {
+          "date": "2026-11-20",
+          "note": "收录自 LowEndBox 11-18 促销帖，标注 HDD 慢盘与续费待核实警示。"
+        }
+      ]
+    },
+    {
+      "id": "dedirock-ram-plus",
+      "provider": "DediRock",
+      "name": "High-RAM Plus · 16GB",
+      "cpu": 1,
+      "ram": 16,
+      "disk": 30,
+      "disk_type": "HDD",
+      "region": "美国 · 纽约布法罗",
+      "price": 59.99,
+      "currency": "USD",
+      "period": "year",
+      "renewal": null,
+      "renewal_note": "原始促销帖未说明续费是否同价",
+      "confidence": "article",
+      "stock": "checkout",
+      "kind": "社区线索",
+      "window_badge": "16G 偏科机",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "16GB 内存",
+        "HDD 慢盘",
+        "仅 1 vCPU"
+      ],
+      "score": "适合超低算力、纯吃内存的缓存/驻留脚本；不要把 16GB RAM 误认为高并发计算能力。",
+      "source": "https://lowendbox.com/blog/the-dedirock-high-ram-vps-is-here-at-last-omg-8gb-ram-for-24-99-year/",
+      "buy": "https://lowendbox.com/blog/the-dedirock-high-ram-vps-is-here-at-last-omg-8gb-ram-for-24-99-year/",
+      "checked": "2026-11-20",
+      "note": "1 vCore / 16GB RAM / 30GB HDD，结算库存与续费条款需下单核验。",
+      "market": "overseas",
+      "eligible": "以商家结算页为准",
+      "bandwidth": "请查套餐明细",
+      "renewal_type": "unknown",
+      "changelog": [
+        {
+          "date": "2026-11-20",
+          "note": "收录自 LowEndBox 促销帖，标注 1C + HDD 架构局限。"
+        }
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "id": "cc-prebf-1g",
+      "provider": "CloudCone",
+      "name": "黑五预热 SSD VPS 1（优惠码 PREBF26）",
+      "spec": "2 vCPU / 1GB RAM / 30GB SSD · 美国",
+      "historical_price": "$24.00/年",
+      "ended_at": "2026-11-20",
+      "reason": "预热码 PREBF26 标注 2026-11-20 到期且限 500 名额；已移出在售榜，避免误导。黑五正式在售套餐请直接核对官网实时列表。",
+      "source": "https://news.cloudcone.com/",
+      "portal": "https://cloudcone.com/",
+      "sponsored": false
+    },
+    {
+      "id": "hostdare-bf2025",
+      "provider": "HostDare",
+      "name": "2025 历史黑五折扣码 BF2025",
+      "spec": "洛杉矶线路型 KVM 历史促销",
+      "historical_price": "已过期历史码",
+      "ended_at": "2025-12",
+      "reason": "部分外部博客仍在转载旧码 BF2025；已确认失效，2026 新活动请关注官网 Promo 页与观望区更新。",
+      "source": "https://hostdare.com/promo.html",
+      "portal": "https://hostdare.com/promo.html",
+      "sponsored": false
+    },
+    {
+      "id": "greencloud-13th",
+      "provider": "GreenCloudVPS",
+      "name": "13 周年庆专场活动",
+      "spec": "多机房周年限量 KVM",
+      "historical_price": "限量售罄",
+      "ended_at": "2026-10",
+      "reason": "周年活动已结束，官方在 LowEndTalk 明确声明 2026 年不再另办独立黑五专场，留档供比价参考。",
+      "source": "https://lowendtalk.com/discussion/222534/greencloud-is-turning-13-exclusive-deals-giveaways-quizzes-games",
+      "portal": "https://greencloudvps.com/",
+      "sponsored": false
+    }
+  ],
+  "watch": [
+    {
+      "provider": "Evoxt",
+      "headline": "黑五正式价与高主频节点跟踪",
+      "status": "待核正式价",
+      "review_date": "2026-11-23",
+      "detail": "多机房高主频轻量机口碑不错；正重点跟踪黑五折扣码、循环续费口径与老客适用规则。",
+      "url": "https://evoxt.com/"
+    },
+    {
+      "provider": "CloudCone",
+      "headline": "PREBF26 结束后盯黑五正式放货",
+      "status": "待核黑五正价",
+      "review_date": "2026-11-23",
+      "detail": "支持支付宝充值余额；11-20 预热码已归档，等待黑五正式年付 SSD/SC2 现货与续费条款。",
+      "url": "https://cloudcone.com/"
+    },
+    {
+      "provider": "Hetzner",
+      "headline": "赫尔辛基部分云服务器调价 -15%",
+      "status": "官方常驻调价",
+      "review_date": "2026-11-23",
+      "detail": "2026-11-10 起生效，并非限时黑五；性能稳健但风控较严且官网未列支付宝。",
+      "url": "https://www.hetzner.com/fr/pressroom/price-reduction-cloud-servers-in-helsinki-now-15-percent-cheaper/"
+    },
+    {
+      "provider": "netcup",
+      "headline": "Black Friday 2026 专题页已上线",
+      "status": "等待放货",
+      "review_date": "2026-11-23",
+      "detail": "德系高配代表，目前仅预告订阅入口；需注意欧区免税审核与无支付宝通道。",
+      "url": "https://www.netcup.com/en/deals/black-friday"
+    },
+    {
+      "provider": "HostDare",
+      "headline": "2026 在售线路型促销核验中",
+      "status": "待比价",
+      "review_date": "2026-11-23",
+      "detail": "支持支付宝与银联；旧码 BF2025 已下架归档，等待核实 2026 实际循环折扣幅度。",
+      "url": "https://hostdare.com/promo.html"
+    },
+    {
+      "provider": "Contabo",
+      "headline": "黑五专题页预告上线",
+      "status": "等待明确折扣",
+      "review_date": "2026-11-23",
+      "detail": "需区分初装费减免与月费真降价，且官网未列出支付宝通道。",
+      "url": "https://contabo.com/en-us/black-friday/"
+    },
+    {
+      "provider": "京东云",
+      "headline": "国内云主机低价活动待核实",
+      "status": "继续跟踪",
+      "review_date": "2026-11-23",
+      "detail": "第三方可见 ¥49/年入门传闻，尚未在官方实时结算页核对续费与带宽规则，暂不入正式榜。",
+      "url": "https://www.jdcloud.com/"
+    },
+    {
+      "provider": "UCloud 优刻得",
+      "headline": "国内/海外云主机与开发者专区",
+      "status": "继续跟踪",
+      "review_date": "2026-11-23",
+      "detail": "重点跟踪轻量机型带宽计费、新老客资格及出海节点续费条款。",
+      "url": "https://www.ucloud.cn/"
+    }
+  ],
+  "payments_checked": "2026-11-23",
+  "payment_note": "支付宝通道不等于人民币标价。所有支付方式依账号地区、结算页和支付渠道变化；未找到官网列示并不等于绝对不支持。",
+  "payment_providers": [
+    {
+      "provider": "RackNerd",
+      "alipay": "yes",
+      "unionpay": "verify",
+      "wechat": "unknown",
+      "billing_currency": "USD（公开套餐标价）",
+      "note": "官网知识库明确列支付宝；银联仅见较早官方公告，结账核实。",
+      "source": "https://my.racknerd.com/index.php?rp=/knowledgebase/7/What-payment-methods-do-you-accept.html"
+    },
+    {
+      "provider": "Evoxt",
+      "alipay": "verify",
+      "unionpay": "unknown",
+      "wechat": "unknown",
+      "billing_currency": "USD（公开套餐标价）",
+      "note": "官方部署教程列支付宝，但官网价格 FAQ 未列；以实际结算可选方式为准。",
+      "source": "https://evoxt.com/guides/how-to-deploy-a-evoxt-vm-with-10-simple-steps/"
+    },
+    {
+      "provider": "CloudCone",
+      "alipay": "yes",
+      "unionpay": "unknown",
+      "wechat": "unknown",
+      "billing_currency": "USD（公开套餐标价）",
+      "note": "官方说明可通过支付宝充值 Cloud Credits（账户余额）支付。",
+      "source": "https://help.cloudcone.com/en-us/article/how-to-add-funds-to-your-account-1n6vknv/"
+    },
+    {
+      "provider": "GreenCloudVPS",
+      "alipay": "yes",
+      "unionpay": "yes",
+      "wechat": "unknown",
+      "billing_currency": "以订单账单为准",
+      "note": "官方支付清单列支付宝及银联。",
+      "source": "https://docs.green.cloud/faq/which-payment-methods-do-you-accept/"
+    },
+    {
+      "provider": "HostDare",
+      "alipay": "yes",
+      "unionpay": "yes",
+      "wechat": "unknown",
+      "billing_currency": "以订单账单为准",
+      "note": "官方知识库列支付宝、银联、PayPal 和国际卡。",
+      "source": "https://bill.hostdare.com/knowledgebase/4/What-payment-methods-do-you-accept.html"
+    },
+    {
+      "provider": "Hetzner",
+      "alipay": "unlisted",
+      "unionpay": "yes",
+      "wechat": "unknown",
+      "billing_currency": "EUR 或 USD",
+      "note": "官网仅列卡、PayPal、SEPA、银行转账；UnionPay 可用但不自动扣款。",
+      "source": "https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/payment-overview/"
+    },
+    {
+      "provider": "netcup",
+      "alipay": "unlisted",
+      "unionpay": "unknown",
+      "wechat": "unknown",
+      "billing_currency": "官网欧洲账单，以结算页为准",
+      "note": "官方支付列表为 PayPal、卡、银行转账、SEPA；未列支付宝。",
+      "source": "https://www.netcup.com/en/about-netcup/payment-methods"
+    },
+    {
+      "provider": "Contabo",
+      "alipay": "unlisted",
+      "unionpay": "unknown",
+      "wechat": "unknown",
+      "billing_currency": "EUR / USD / GBP",
+      "note": "官网未列支付宝，货币仅支持 EUR、USD、GBP。",
+      "source": "https://help.contabo.com/en/support/solutions/articles/103000269311/"
+    },
+    {
+      "provider": "DediRock",
+      "alipay": "verify",
+      "unionpay": "unknown",
+      "wechat": "unknown",
+      "billing_currency": "USD（公开套餐标价）",
+      "note": "官方支付知识库仅列信用卡、PayPal、比特币、支票；第三方对支付宝说法不一致，未核实。",
+      "source": "https://billing.dedirock.com/index.php/knowledgebase/9/Ways-to-Pay-for-Your-Dedirock-Account.html"
+    },
+    {
+      "provider": "阿里云",
+      "alipay": "yes",
+      "unionpay": "yes",
+      "wechat": "unknown",
+      "billing_currency": "CNY · 中国站人民币",
+      "note": "官方费用中心列支付宝、银联及网银；微信渠道未从本轮资料确认。",
+      "source": "https://help.aliyun.com/zh/user-center/use-alipay-online-banking-to-recharge-online"
+    },
+    {
+      "provider": "腾讯云",
+      "alipay": "unlisted",
+      "unionpay": "unknown",
+      "wechat": "yes",
+      "billing_currency": "CNY · 中国站人民币",
+      "note": "中国站费用中心列微信、QQ钱包和网银充值，未列支付宝；其他渠道看实际结算页。",
+      "source": "https://cloud.tencent.com/document/product/555/7425"
+    },
+    {
+      "provider": "华为云",
+      "alipay": "yes",
+      "unionpay": "yes",
+      "wechat": "yes",
+      "billing_currency": "CNY · 中国站人民币",
+      "note": "官方列支付宝、微信、银联；可用渠道取决于账号签约主体。",
+      "source": "https://support.huaweicloud.com/billing_faq/billing_faq_1100008.html"
+    }
+  ],
+  "info_sites": [
+    {
+      "title": "云惠通",
+      "category": "国内公有云比价",
+      "description": "阿里云、腾讯云、京东云等配置比价，展示首年和续费口径；部分链接为联盟推广。",
+      "url": "https://wehosts.cn/deals",
+      "focus": "china"
+    },
+    {
+      "title": "VPS录",
+      "category": "国内外优惠 / 实测",
+      "description": "国内外VPS活动、到期提醒、实测与专题；作为发现线索，仍需回官网复核。",
+      "url": "https://vpslu.com/",
+      "focus": "both"
+    },
+    {
+      "title": "老左笔记",
+      "category": "资讯与评测",
+      "description": "VPS、云服务器、建站教程和优惠文章；含商家推广内容，注意标注。",
+      "url": "https://www.laozuo.org/vps/",
+      "focus": "both"
+    },
+    {
+      "title": "主机百科",
+      "category": "VPS商家资讯",
+      "description": "主机商、促销、机房线路等资讯。",
+      "url": "https://www.buddywing.net/",
+      "focus": "both"
+    },
+    {
+      "title": "主机镇",
+      "category": "VPS优惠与测评",
+      "description": "近期套餐清单和商家活动；适合获取线索，不替代商家条款。",
+      "url": "https://www.zhujitown.com/",
+      "focus": "both"
+    },
+    {
+      "title": "VPSCompass",
+      "category": "配置与资费索引",
+      "description": "国内云、国内外VPS的规格和活动记录，需看原始核验时间。",
+      "url": "https://www.vpscompass.com/best-vps-hosting/china-cloud/",
+      "focus": "china"
+    }
+  ]
+}
