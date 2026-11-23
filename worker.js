@@ -1,3 +1,5 @@
+import { handleSeoRoutes } from "./seo-pages-module/seo-router.js";
+
 const FEEDS = [
   { source: "LowEndBox", url: "https://lowendbox.com/feed/", host: "lowendbox.com", region: "overseas" },
   { source: "LEB Black Friday", url: "https://lowendbox.com/tag/black-friday/feed/", host: "lowendbox.com", region: "overseas" },
@@ -483,6 +485,9 @@ export default {
     if (path === "/index.html") {
       return Response.redirect(new URL("/", url.origin).toString(), 301);
     }
+
+    const seoResponse = handleSeoRoutes(request);
+    if (seoResponse) return seoResponse;
 
     const indexNowKey = env?.INDEXNOW_KEY || "";
     if (indexNowKey && path === `/${indexNowKey}.txt`) {
