@@ -2,7 +2,7 @@ const $ = id => document.getElementById(id);
 const money = (n, currency = 'USD') =>
   n === null || n === undefined
     ? '待核实'
-    : (currency === 'CNY' ? '¥' : '$') + Number(n).toFixed(currency === 'CNY' ? 0 : 2);
+    : (currency === 'CNY' ? '¥' : currency === 'EUR' ? '€' : '$') + Number(n).toFixed(currency === 'CNY' ? 0 : 2);
 const market = d => d.market || (d.currency === 'CNY' ? 'china' : 'overseas');
 const safe = s => String(s ?? '').replace(/[&<>"']/g, x => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
 
@@ -68,7 +68,9 @@ const renewalText = d => isKnown(d)
     : '待核实 / 非同价';
 
 function annualCny(d) {
-  return d.currency === 'CNY' ? d.price : d.price * liveFxRate;
+  if (d.currency === 'CNY') return d.price;
+  if (d.currency === 'EUR') return d.price * liveFxRate * 1.06;
+  return d.price * liveFxRate;
 }
 
 function monthlyEquivText(d) {
@@ -344,7 +346,7 @@ function calc() {
   const oldRam = Math.max(0, Number($('oldRam').value) || 0);
   const oldCpu = Math.max(0, Number($('oldCpu').value) || 0);
   const fx = Math.max(0.1, Number($('fxRate').value) || liveFxRate);
-  const nextInUsd = d.currency === 'CNY' ? d.price / fx : d.price;
+  const nextInUsd = d.currency === 'CNY' ? d.price / fx : d.currency === 'EUR' ? d.price * 1.06 : d.price;
   const delta = nextInUsd - oldPrice;
   const change = delta > 0.009 ? `新机首年约多付 $${delta.toFixed(2)}` : delta < -0.009 ? `新机首年约少付 $${(-delta).toFixed(2)}` : '首年费用大致相近';
   const total3y = isKnown(d) ? money(d.price + 2 * d.renewal, d.currency) : '无法可靠核算';
@@ -638,6 +640,12 @@ async function loadLeads() {
     status.textContent = feed.updated_at
       ? `最近更新：${new Date(feed.updated_at).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })} · ${okCount}/${totalSources} 源 · ${allLeads.length} 条线索 · ${via}${formatCountdown(feed.next_refresh_at)}`
       : '尚未运行首次自动采集';
+    if ($('liveRadarPill') && feed.updated_at) {
+      const hhmm = new Date(feed.updated_at).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit' });
+      const topSources = Array.from(new Set(allLeads.slice(0, 6).map(x => x.source))).slice(0, 3).join(' / ');
+      $('liveRadarPill').textContent = `4H 雷达 ${hhmm} 已自动更新 · 最新 ${allLeads.length} 条（${topSources} 等）↘`;
+      $('liveRadarPill').hidden = false;
+    }
     renderAiBrief(feed);
     renderLeads();
   } catch {

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-23",
+  "snapshot": "2026-11-25",
   "timezone": "Asia/Shanghai",
   "auto_refresh": true,
   "auto_refresh_interval_hours": 4,
@@ -185,6 +185,170 @@
         {
           "date": "2026-11-20",
           "note": "首次收录 1GB 入门款 $15.98/年。"
+        }
+      ]
+    },
+    {
+      "id": "hostdare-ssd1",
+      "provider": "HostDare",
+      "name": "LA NVMe · SSD1（75 折循环码）",
+      "cpu": 1,
+      "ram": 1,
+      "disk": 25,
+      "disk_type": "NVMe",
+      "region": "美国 · 洛杉矶（支持支付宝）",
+      "price": 29.99,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 29.99,
+      "renewal_note": "官网优惠码 XY604XMHXK 享 25% 循环同价折扣，年付可发工单申请双倍内存与流量",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "优惠码循环",
+      "window_badge": "码 XY604XMHXK",
+      "recommended": true,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "NVMe",
+        "支持支付宝/银联"
+      ],
+      "score": "洛杉矶机房 25GB NVMe，支持支付宝与银联；年付下单后发工单通常可申请双倍内存/流量（以官网活动规则为准）。",
+      "source": "https://hostdare.com/promo.html",
+      "buy": "https://hostdare.com/promo.html",
+      "checked": "2026-11-25",
+      "note": "官方 Promo 页在售折扣，结账时需手动输入循环 75 折优惠码 XY604XMHXK。",
+      "market": "overseas",
+      "eligible": "年付及以上周期可用",
+      "bandwidth": "1Gbps · 1000GB/月",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-25",
+          "note": "核验 HostDare Promo 页在售 25% 循环折扣码 XY604XMHXK（$29.99/年起）。"
+        }
+      ]
+    },
+    {
+      "id": "hostdare-ssd2",
+      "provider": "HostDare",
+      "name": "LA NVMe · SSD2（75 折循环码）",
+      "cpu": 2,
+      "ram": 2,
+      "disk": 50,
+      "disk_type": "NVMe",
+      "region": "美国 · 洛杉矶（支持支付宝）",
+      "price": 53.24,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 53.24,
+      "renewal_note": "官网优惠码 XY604XMHXK 享 25% 循环同价折扣",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "优惠码循环",
+      "window_badge": "码 XY604XMHXK",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "循环同价",
+        "50GB NVMe",
+        "支持支付宝/银联"
+      ],
+      "score": "2 核 2G 配 50GB NVMe 固态盘与 2TB 月流量，适合看重磁盘 IO 和洛杉矶美西机房的个人项目。",
+      "source": "https://hostdare.com/promo.html",
+      "buy": "https://hostdare.com/promo.html",
+      "checked": "2026-11-25",
+      "note": "官方 Promo 页在售折扣，结账输入优惠码 XY604XMHXK 后按 $53.24/年循环续费。",
+      "market": "overseas",
+      "eligible": "年付及以上周期可用",
+      "bandwidth": "1Gbps · 2000GB/月",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-25",
+          "note": "核验 HostDare SSD2 25% 循环折扣后年付 $53.24。"
+        }
+      ]
+    },
+    {
+      "id": "evoxt-vm2",
+      "provider": "Evoxt",
+      "name": "VM-2 · 高主频 4GB（多机房可选）",
+      "cpu": 2,
+      "ram": 4,
+      "disk": 30,
+      "disk_type": "SSD",
+      "region": "美/欧/亚太（含马来西亚/日本）",
+      "price": 143.88,
+      "currency": "USD",
+      "period": "year",
+      "renewal": 143.88,
+      "renewal_note": "官网常规标准价（$11.99/月，按 12 个月折算 $143.88/年），无首年涨价套路",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "高主频常规",
+      "window_badge": "支持月付 $11.99",
+      "recommended": false,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "高主频 CPU",
+        "可月付试错",
+        "多亚太机房"
+      ],
+      "score": "主打单核高主频与亚太/美欧多机房选择，支持 $11.99 按月弹性试用，适合对单核响应速度敏感的 Agent 或 API。",
+      "source": "https://evoxt.com/pricing/",
+      "buy": "https://evoxt.com/pricing/",
+      "checked": "2026-11-25",
+      "note": "官方按月标价 $11.99/月（页面同时列年折算价）；支付宝支持情况需在结算页确认。",
+      "market": "overseas",
+      "eligible": "新老用户标准价",
+      "bandwidth": "按机房配额",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-25",
+          "note": "核验 Evoxt 官网 VM-2 标准月价 $11.99/月（年计 $143.88），纳入正式对比。"
+        }
+      ]
+    },
+    {
+      "id": "hetzner-cx23",
+      "provider": "Hetzner",
+      "name": "Cloud CX23 · 4GB NVMe（欧洲大厂）",
+      "cpu": 2,
+      "ram": 4,
+      "disk": 40,
+      "disk_type": "NVMe",
+      "region": "德国 / 芬兰赫尔辛基",
+      "price": 71.88,
+      "currency": "EUR",
+      "period": "year",
+      "renewal": 71.88,
+      "renewal_note": "官方标准月付封顶价 €5.99/月（含 IPv4，不含 VAT；年计 €71.88），无任何续费翻倍",
+      "confidence": "official",
+      "stock": "checkout",
+      "kind": "欧洲大厂标杆",
+      "window_badge": "赫尔辛基 -15% 后",
+      "recommended": true,
+      "icp_note": "海外节点 · 免 ICP 备案",
+      "tags": [
+        "20TB 大流量",
+        "NVMe",
+        "按小时计费"
+      ],
+      "score": "欧洲老牌大厂性价比天花板：4GB+40GB NVMe+20TB 月流量，按小时计费无长期绑约；缺点是官网未列支付宝且新号风控严。",
+      "source": "https://www.hetzner.com/cloud/",
+      "buy": "https://www.hetzner.com/cloud/",
+      "checked": "2026-11-25",
+      "note": "不含欧盟 VAT 税费（海外非欧盟个人账号通常免 VAT）；需信用卡/PayPal，官网未列支付宝。",
+      "market": "overseas",
+      "eligible": "需通过官方账号实名/支付风控审核",
+      "bandwidth": "20 TB/月",
+      "renewal_type": "recurring",
+      "changelog": [
+        {
+          "date": "2026-11-25",
+          "note": "核验 Hetzner CX23（替代旧款 CX22）含 IPv4 现价 €5.99/月，收录为欧洲大厂对照基准。"
         }
       ]
     },
