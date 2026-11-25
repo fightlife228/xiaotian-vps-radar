@@ -49,7 +49,7 @@
 | 模块 | 说明 |
 |---|---|
 | **瑞士工程双主题 UI** | 默认高可读冷白灰工程亮色风，右上角一键切换 Linear/Vercel 风格专业暗黑，无闪烁 `localStorage` 持久化 |
-| **三态情报生命周期** | **在售精选**（带 `★实测推荐`、循环续费强标、详情变更日志抽屉）· **观望区**（标复核日）· **已过期/下架档案**（隔离过期货） |
+| **三态情报生命周期 + 免费实验区** | **在售精选**（带 `★实测推荐`、循环续费强标、详情变更日志抽屉）· **观望区**（标复核日）· **已过期/下架档案**（隔离过期货）· **白嫖实验区**（Nodaroo / Altare / Simular Box / Oracle / CF 风险边界对比） |
 | **4H 自动 9 源雷达 + 免费 Workers AI** | Cloudflare Workers Cron 每 4 小时抓取 LowEndBox / LowEndTalk / LowEndSpirit / RackNerd / 老左 / VPSGO 等 9 大公开 RSS，调用免费 Workers AI 增量翻译中文并生成 4H 速读简报（14 天 KV 增量缓存） |
 | **自动汇率同步 + 官网在线探活** | 每 4 小时自动同步 USD/CNY 实时参考汇率，并自动 HEAD 巡检各厂商活动页在线状态（`● 官网在线 ✓`） |
 | **零 JS 友好的 SEO + GEO** | Worker 直接将最新 AI 中文简报与 Top 12 线索 SSR 注入首页 HTML；提供 `/table.html` 静态总表、`llms.txt`、`sitemap.xml` 与可选 IndexNow 自动推送 |
@@ -128,4 +128,4 @@ npx wrangler deploy
 
 ## License
 
-[MIT License](./LICENSE) © 2026 [小天聊AI](https://www.xiaotianai.win/)
+[MIT License](./LICENSE) © 2026 [小天聊AI](https://www.xiaotianai.win/) · 微信公众号：**小天聊AI职场** · X：[@BenMing77885](https://x.com/BenMing77885)

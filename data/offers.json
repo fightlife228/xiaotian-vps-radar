@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-25",
+  "snapshot": "2026-11-26",
   "timezone": "Asia/Shanghai",
   "auto_refresh": true,
   "auto_refresh_interval_hours": 4,
@@ -607,6 +607,21 @@
       "use_case": "Node / Python / Go 轻量 Bot、多实例沙盒实验。",
       "url": "https://altr.cc/",
       "checked": "2026-11-23"
+    },
+    {
+      "id": "simular-box-free",
+      "provider": "Simular Box",
+      "name": "免费版 Ubuntu 云电脑（站长 11-24 实测）",
+      "form": "免费沙盒云电脑（非独立生产 KVM）",
+      "stability": "实验级 · 限 50 小时 & 14 天休眠删机",
+      "tier_level": "experimental",
+      "spec": "实测 2C / 4GB RAM / 20GB 硬盘（宣传 4C8G 有缩水）",
+      "auth_req": "免绑卡 · 免付费 · Ubuntu 环境",
+      "renewal_rule": "5000 credits（约 50 小时），90 天有效；空闲自动休眠，连续休眠 14 天会被删除实例。",
+      "caveats": "官方宣传 4 核 8G，站长 11-24 实测免费版实际为 2 核 4G / 20G 硬盘；有总时长与 14 天休眠删机限制，白嫖需定期唤醒，严禁存放生产业务或重要数据。",
+      "use_case": "临时 AI Agent 桌面环境体验、短期 Ubuntu 沙盒脚本测试。",
+      "url": "https://box.simular.ai/",
+      "checked": "2026-11-24"
     },
     {
       "id": "oracle-always-free",

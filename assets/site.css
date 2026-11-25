@@ -1847,3 +1847,115 @@ button { cursor: pointer; }
   .guide-main { display: block; }
   .guide-aside { position: static; flex-direction: row; flex-wrap: wrap; border-left: 0; padding-left: 0; margin-bottom: 24px; }
 }
+
+/* WeChat Official Account Dual-Theme Widget */
+.xt-wechat-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 38px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+}
+.xt-wechat-info { flex: 1 1 300px; min-width: 0; }
+.xt-wechat-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--green-soft);
+  border: 1px solid var(--green-border);
+  border-radius: 999px;
+  margin-bottom: 7px;
+}
+.xt-wechat-title { margin: 0 0 5px; font-size: 17px; font-weight: 780; color: var(--ink); }
+.xt-wechat-desc { margin: 0; font-size: 13px; color: var(--ink-2); line-height: 1.65; }
+.xt-wechat-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.xt-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  background: #07c160;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.14s ease, transform 0.12s ease;
+}
+.xt-copy-btn:hover { background: #06ad56; transform: translateY(-1px); }
+.xt-fab-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: #07c160;
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(7, 193, 96, 0.34);
+  cursor: pointer;
+  transition: transform 0.14s ease, background-color 0.14s ease;
+}
+.xt-fab-btn:hover { background: #06ad56; transform: translateY(-2px); }
+.xt-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(15, 23, 42, 0.56);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.xt-modal.open { display: flex; }
+.xt-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 24px 22px 20px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.xt-modal-box h4 { margin: 4px 0 8px; font-size: 17px; color: var(--ink); }
+.xt-modal-box p { margin: 0 0 16px; font-size: 13px; color: var(--ink-2); line-height: 1.65; }
+.xt-modal-actions { display: flex; flex-direction: column; gap: 10px; }
+.xt-modal-actions .xt-copy-btn { width: 100%; }
+.xt-modal-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.xt-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+.xt-modal-close:hover { color: var(--ink); border-color: var(--accent); }
+@media (max-width: 720px) {
+  .xt-fab-btn { right: 12px; bottom: 12px; padding: 8px 12px; font-size: 12px; }
+}

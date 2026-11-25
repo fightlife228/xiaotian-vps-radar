@@ -66,7 +66,7 @@ function renderLayout({ path, title, description, directAnswer, bodyHtml, jsonLd
   <meta name="twitter:image" content="${SITE_META.siteUrl}/assets/og-cover.png" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script src="/assets/theme.js?v=20"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=21" />
+  <link rel="stylesheet" href="/assets/site.css?v=22" />
   ${allLd}
 </head>
 <body>
@@ -126,6 +126,7 @@ function renderLayout({ path, title, description, directAnswer, bodyHtml, jsonLd
       <span class="mono">© 2026 ${esc(SITE_META.siteName)} · SSR SEO/GEO Engine</span>
     </div>
   </footer>
+  <script src="/assets/wechat-widget.js?v=1" defer></script>
 </body>
 </html>`;
 }

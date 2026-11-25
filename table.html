@@ -15,7 +15,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script src="/assets/theme.js?v=20"></script>
   <title>完整 VPS 参数与续费总表（支持导出 CSV / JSON）｜小天 VPS 雷达</title>
-  <link rel="stylesheet" href="/assets/site.css?v=20" />
+  <link rel="stylesheet" href="/assets/site.css?v=22" />
 </head>
 <body>
   <header class="topbar">
@@ -142,7 +142,7 @@
   <script>
   (async function () {
     const safe = s => String(s ?? '').replace(/[&<>"']/g, x => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
-    const money = (n, c) => (c === 'CNY' ? '¥' : '$') + Number(n).toFixed(c === 'CNY' ? 0 : 2);
+    const money = (n, c) => (c === 'CNY' ? '¥' : c === 'EUR' ? '€' : '$') + Number(n).toFixed(c === 'CNY' ? 0 : 2);
     const payLabel = x => x === 'yes' ? '已确认' : x === 'verify' ? '待核实' : x === 'unlisted' ? '未列出' : '未知';
     let fx = 7.20;
     let offers = [];
@@ -167,7 +167,7 @@
     } catch { return; }
 
     const isRec = d => typeof d.renewal === 'number' && (d.renewal_type === 'recurring' || d.renewal_type === 'until-date');
-    const cnyVal = d => d.currency === 'CNY' ? d.price : d.price * fx;
+    const cnyVal = d => d.currency === 'CNY' ? d.price : d.currency === 'EUR' ? d.price * fx * 1.06 : d.price * fx;
     const payOf = p => payments.find(x => x.provider === p);
 
     function filteredOffers() {
@@ -233,5 +233,6 @@
     render();
   })();
   </script>
+  <script src="/assets/wechat-widget.js?v=1" defer></script>
 </body>
 </html>
