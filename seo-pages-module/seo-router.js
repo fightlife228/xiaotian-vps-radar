@@ -14,13 +14,13 @@ function esc(str) {
 }
 
 function fmtPrice(deal) {
-  const sym = deal.currency === "CNY" ? "¥" : "$";
+  const sym = deal.currency === "CNY" ? "¥" : deal.currency === "EUR" ? "€" : "$";
   return `${sym}${deal.first_year_price}/年`;
 }
 
 function fmtThreeYear(deal) {
   if (deal.three_year_total == null) return "待核实（勿按首年×3）";
-  const sym = deal.currency === "CNY" ? "¥" : "$";
+  const sym = deal.currency === "CNY" ? "¥" : deal.currency === "EUR" ? "€" : "$";
   return `${sym}${deal.three_year_total}`;
 }
 
@@ -370,6 +370,8 @@ ${seoLines}
 - 实时参考汇率与官网在线探活 JSON：${SITE_META.siteUrl}/api/live-status
 - 结构化核验数据快照：${SITE_META.siteUrl}/data/offers.json
 - GitHub 开源仓库 (MIT)：${SITE_META.githubUrl}
+- GitHub 公开核验数据集 (CC-BY-4.0)：https://github.com/fightlife228/china-friendly-vps-deals-2026
+- 微信公众号：小天聊AI职场（主站：https://www.xiaotianai.win/）
 
 ## 已核验精选数据快照（${SITE_META.snapshotDate}）
 ${dealLines}
